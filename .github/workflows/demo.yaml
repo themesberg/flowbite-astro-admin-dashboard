@@ -55,6 +55,10 @@ jobs:
 
       # ————————————————————————————————————————————————————————————————————————
 
+      - name: Install Node dependencies
+        # `production` to exclude dev. dependencies
+        run: NODE_ENV=production pnpm install
+
       - name: Build demo website (dist)
         run: 'NODE_ENV=production pnpm run build'
 
