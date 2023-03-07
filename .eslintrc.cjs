@@ -4,31 +4,20 @@
 module.exports = {
 	root: true,
 
-	/* — JS — */
-
-	overrides: [
-		{
-			files: ['*.js', '*.mjs', '*.cjs'],
-			parserOptions: {
-				ecmaVersion: 'latest',
-				sourceType: 'module',
-			},
-			extends: ['airbnb-base', 'eslint:recommended', 'prettier'],
-			rules: {
-				'import/prefer-default-export': 'off',
-			},
-		},
-	],
-
-	/* — TS — */
-
 	settings: {
 		/* This loads <rootdir>/tsconfig.json to eslint */
 		'import/resolver': {
 			typescript: { project: ['./tsconfig.json'] },
 		},
 	},
+
+	env: {
+		browser: true,
+		node: true,
+	},
+
 	overrides: [
+		/* — TS — */
 		{
 			files: ['*.ts', '*.mts', '*.cts'],
 			plugins: [
@@ -71,15 +60,26 @@ module.exports = {
 				'import/extensions': 'off',
 			},
 		},
-	],
 
-	/* Astro */
+		/* — JS — */
+		{
+			files: [
+				// TODO: fix "Parsing error: The keyword 'import' is reserved" in `*.mjs`
+				'*.js',
+				'*.mjs',
+				'*.cjs',
+			],
+			parserOptions: {
+				ecmaVersion: 'latest',
+				sourceType: 'module',
+			},
+			extends: ['airbnb-base', 'eslint:recommended', 'prettier'],
+			rules: {
+				'import/prefer-default-export': 'off',
+			},
+		},
 
-	env: {
-		browser: true,
-		node: true,
-	},
-	overrides: [
+		/* Astro */
 		{
 			files: ['*.astro'],
 			extends: [
