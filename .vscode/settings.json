@@ -1,0 +1,28 @@
+// Extracted from https://github.com/JulianCataldo/web-garden/blob/develop/.vscode/settings.json
+
+{
+	/* —————————————————————————————— Typescript —————————————————————————————— */
+	"typescript.inlayHints.parameterNames.enabled": "all",
+
+	/* —————————————————————————————— Tailwind ———————————————————————————————— */
+	"tailwindCSS.includeLanguages": {
+		/* Adds class inlay hints inside `.astro` templates (acts as HTML) */
+		"astro": "html"
+	},
+
+	/* —————————————————————————————— ESLint —————————————————————————————————— */
+	"eslint.validate": [
+		"astro" /* Using `astro-eslint-parser` + `eslint-plugin-astro` */,
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+
+	/* —————————————————————————————— Prettier ———————————————————————————————— */
+	/* Add support for `prettier-plugin-astro` */
+	"prettier.documentSelectors": ["**/*.astro"],
+	"[astro]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}
