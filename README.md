@@ -53,10 +53,8 @@ This product is built using the following widely used technologies:
   - [📚 Flowbite documentation](#-flowbite-documentation)
   - [⚙️ Workflow](#️-workflow)
   - [Table of Contents](#table-of-contents)
-  - [Demo pages](#demo-pages)
     - [JavaScript Frameworks](#javascript-frameworks)
     - [Back-end Frameworks](#back-end-frameworks)
-  - [File Structure](#file-structure)
   - [Browser Support](#browser-support)
   - [Resources](#resources)
   - [Reporting Issues](#reporting-issues)
@@ -65,7 +63,7 @@ This product is built using the following widely used technologies:
   - [Useful Links](#useful-links)
   - [Authors](#authors)
 
-## Demo pages
+<!-- ## Demo pages
 
 | Dashboard                                                                                                                                              | Stacked Layout                                                                                                                                                             | Products (CRUD)                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -87,7 +85,7 @@ This product is built using the following widely used technologies:
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![404 not found](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/404.jpg)](https://flowbite-admin-dashboard.vercel.app/pages/404/) | [![500 server error](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/500.jpg)](https://flowbite-admin-dashboard.vercel.app/pages/500/) | [![Playground](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/playground.jpg)](https://flowbite-admin-dashboard.vercel.app/playground/sidebar/) |
 
-- [Live Preview](https://flowbite-admin-dashboard.vercel.app/)
+- [Live Preview](https://flowbite-admin-dashboard.vercel.app/) -->
 
 <!-- ## Quick start
 
@@ -141,7 +139,7 @@ Flowbite has a great integration with most of the back-end frameworks because it
 - [🐸 Using Flowbite with Django](https://flowbite.com/docs/getting-started/django/)
 - [🌶 Using Flowbite with Flask](https://flowbite.com/docs/getting-started/flask/)
 
-## File Structure
+<!-- ## File Structure
 
 Within the download you'll find the following directories and files:
 
@@ -164,17 +162,21 @@ Flowbite Admin Dashboard
 ├── tailwind.config.js
 ├── webpack.config.js
 └── yarn.lock
-```
+``` -->
 
 ## Browser Support
 
 At present, we officially aim to support the last two versions of the following browsers:
 
+<!-- NOTE: This is an Tailwind in MD experiment, to make it nice when rendered with Astro -->
+<div class="flex justify-between w-full">
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
+</div>
 
 ## Resources
 
-- Live preview: <https://flowbite-admin-dashboard.vercel.app/>
+<!-- - Live preview: <https://flowbite-admin-dashboard.vercel.app/> -->
+
 - Flowbite documentation: <https://flowbite.com/docs/getting-started/introduction/>
 - Tailwind CSS documentation: <https://tailwindcss.com/>
 - License Agreement: <https://flowbite.com/docs/getting-started/license/>

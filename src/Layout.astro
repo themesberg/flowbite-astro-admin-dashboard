@@ -1,0 +1,29 @@
+---
+import pkg from '../package.json' assert { type: 'json' };
+
+const title = 'Flowbite Astro Admin Dashboard';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title} — v{pkg.version}</title>
+
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={pkg.description} />
+	</head>
+	<body
+		class="bg-gradient-to-r from-slate-900 to-slate-800 text-slate-100 mb-20 p-16"
+	>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	svg {
+		height: 100%;
+		width: 100%;
+	}
+</style>

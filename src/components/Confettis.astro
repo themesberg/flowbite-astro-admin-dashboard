@@ -1,0 +1,41 @@
+<div data-trigger-confettis>
+	<slot />
+</div>
+
+<div class="wrapper">
+	<canvas id="confettis"></canvas>
+</div>
+
+<script
+	is:inline
+	src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"
+></script>
+
+<style>
+	.wrapper {
+		top: 0;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+</style>
+
+<script>
+	// @ts-ignore
+	const confettiElement = document.querySelector('#confettis');
+	const triggerConfettis = document.querySelector('[data-trigger-confettis]');
+
+	triggerConfettis.addEventListener('click', popIt);
+
+	function popIt() {
+		const confettiSettings = {
+			target: confettiElement,
+			start_from_edge: true,
+		};
+		const confetti = new ConfettiGenerator(confettiSettings);
+		confetti.render();
+	}
+
+	console.log('Pop 🎉!');
+</script>
