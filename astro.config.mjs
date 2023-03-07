@@ -7,6 +7,9 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
 	site: 'https://themesberg.github.io/flowbite-astro-admin-dashboard',
 
+	/* Like Vercel, Netlify, GH Pages… Mimicking for dev. server */
+	trailingSlash: true,
+
 	server: {
 		/* Dev. server only */
 		port: 2121,
