@@ -2,7 +2,7 @@
 
 <!-- NOTE: This is a Tailwind in MD experiment, to make it nice when rendered with Astro -->
 <div class="flex flex-wrap justify-evenly w-full">
-	<a href="https://www.npmjs.com/package/flowbite-admin-dashboard"><img src="https://img.shields.io/badge/version-v0.0.2-blue" alt="version"></a>
+	<a href="https://www.npmjs.com/package/flowbite-admin-dashboard"><img src="https://img.shields.io/badge/version-v0.0.3-blue" alt="version"></a>
 	<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"></a>
 	<a href="https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/github/issues/themesberg/flowbite-astro-admin-dashboard.svg" alt="GitHub issues open"></a>
 	<a href="https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/themesberg/flowbite-astro-admin-dashboard.svg" alt="GitHub issues closed"></a>
@@ -53,22 +53,22 @@ This product is built using the following widely used technologies:
 ## Table of Contents
 
 - [Flowbite Astro Admin Dashboard ](#flowbite-astro-admin-dashboard-)
-	- [🌀 Built with Flowbite](#-built-with-flowbite)
-	- [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
-	- [📊 15 example pages](#-15-example-pages)
-	- [🧱 Advanced components](#-advanced-components)
-	- [📚 Flowbite documentation](#-flowbite-documentation)
-	- [⚙️ Workflow](#️-workflow)
-	- [Table of Contents](#table-of-contents)
-		- [JavaScript Frameworks](#javascript-frameworks)
-		- [Back-end Frameworks](#back-end-frameworks)
-	- [Browser Support](#browser-support)
-	- [Resources](#resources)
-	- [Reporting Issues](#reporting-issues)
-	- [Technical Support or Questions](#technical-support-or-questions)
-	- [Licensing](#licensing)
-	- [Useful Links](#useful-links)
-	- [Authors](#authors)
+  - [🌀 Built with Flowbite](#-built-with-flowbite)
+  - [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
+  - [📊 15 example pages](#-15-example-pages)
+  - [🧱 Advanced components](#-advanced-components)
+  - [📚 Flowbite documentation](#-flowbite-documentation)
+  - [⚙️ Workflow](#️-workflow)
+  - [Table of Contents](#table-of-contents)
+    - [JavaScript Frameworks](#javascript-frameworks)
+    - [Back-end Frameworks](#back-end-frameworks)
+  - [Browser Support](#browser-support)
+  - [Resources](#resources)
+  - [Reporting Issues](#reporting-issues)
+  - [Technical Support or Questions](#technical-support-or-questions)
+  - [Licensing](#licensing)
+  - [Useful Links](#useful-links)
+  - [Authors](#authors)
 
 <!-- ## Demo pages
 

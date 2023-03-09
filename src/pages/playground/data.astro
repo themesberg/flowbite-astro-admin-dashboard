@@ -1,14 +1,11 @@
 ---
 import Code from 'astro/components/Code.astro';
 import Layout from '../../Layout.astro';
-import { API_URL } from '../../consts.js';
+import { getUsers, getProducts } from '../../operations/index.js';
 
-const products = await fetch(`${API_URL}products`).then(async (r) =>
-	JSON.stringify(await r.json(), null, 2),
-);
-const users = await fetch(`${API_URL}users`).then(async (r) =>
-	JSON.stringify(await r.json(), null, 2),
-);
+const products = JSON.stringify(getProducts(), null, 2);
+
+const users = JSON.stringify(getUsers(), null, 2);
 ---
 
 <Layout>

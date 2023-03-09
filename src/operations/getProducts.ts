@@ -1,11 +1,11 @@
+/* eslint-disable max-lines */
 /* eslint-disable no-param-reassign */
-
-import type { APIRoute } from 'astro';
 import { faker } from '@faker-js/faker';
 
-export const get: APIRoute = ({ params, request }) => {
-	console.log('Hit! (products)');
+export function getProducts() {
+	console.log('getProducts');
 
+	// eslint-disable-next-line @typescript-eslint/no-use-before-define
 	const productsRandomized = products.map((p) => {
 		p.price = faker.commerce.price();
 		p.technology = faker.commerce.productName();
@@ -13,14 +13,8 @@ export const get: APIRoute = ({ params, request }) => {
 		return p;
 	});
 
-	// eslint-disable-next-line @typescript-eslint/no-use-before-define
-	return new Response(JSON.stringify(productsRandomized), {
-		status: 200,
-		headers: {
-			'Content-Type': 'application/json',
-		},
-	});
-};
+	return productsRandomized;
+}
 
 const products = [
 	{
@@ -264,3 +258,5 @@ const products = [
 		discount: 'No',
 	},
 ];
+
+export type Products = typeof products;

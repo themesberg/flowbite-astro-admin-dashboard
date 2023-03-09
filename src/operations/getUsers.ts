@@ -1,13 +1,12 @@
+/* eslint-disable max-lines */
 /* eslint-disable no-param-reassign */
-
-import type { APIRoute } from 'astro';
 import { faker } from '@faker-js/faker';
 
-export const get: APIRoute = ({ params, request }) => {
-	console.log('Hit! (users)');
+export function getUsers() {
+	console.log('getUsers');
 
 	// eslint-disable-next-line @typescript-eslint/no-use-before-define
-	const usersRandomized = products.map((p) => {
+	const usersRandomized = users.map((p) => {
 		p.name = faker.name.fullName();
 		p.email = faker.internet.email();
 		p.position = faker.name.jobTitle();
@@ -15,15 +14,10 @@ export const get: APIRoute = ({ params, request }) => {
 		return p;
 	});
 
-	return new Response(JSON.stringify(usersRandomized), {
-		status: 200,
-		headers: {
-			'Content-Type': 'application/json',
-		},
-	});
-};
+	return usersRandomized;
+}
 
-const products = [
+const users = [
 	{
 		id: 1,
 		name: 'Neil Sims',
@@ -245,3 +239,5 @@ const products = [
 		status: 'Active',
 	},
 ];
+
+export type Users = typeof users;

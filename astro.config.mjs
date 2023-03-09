@@ -13,7 +13,7 @@ export default defineConfig({
 	base: process.env.CI ? '/flowbite-astro-admin-dashboard' : undefined,
 
 	/* Like Vercel, Netlify,… Mimicking for dev. server */
-	trailingSlash: 'always',
+	// trailingSlash: 'always',
 
 	server: {
 		/* Dev. server only */
