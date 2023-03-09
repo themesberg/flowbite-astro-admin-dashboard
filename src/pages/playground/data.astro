@@ -1,0 +1,33 @@
+---
+import Code from 'astro/components/Code.astro';
+import Layout from '../../Layout.astro';
+import { API_URL } from '../../consts.js';
+
+const products = await fetch(`${API_URL}products`).then(async (r) =>
+	JSON.stringify(await r.json(), null, 2),
+);
+const users = await fetch(`${API_URL}users`).then(async (r) =>
+	JSON.stringify(await r.json(), null, 2),
+);
+---
+
+<Layout>
+	<div class="mb-8">
+		<button
+			type="button"
+			class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+			onclick="location.reload()">Refresh</button
+		>
+	</div>
+
+	<div class="mb-16">
+		<h1 class="text-8xl font-bold mb-8">Products</h1>
+
+		<Code code={products} lang="json" />
+	</div>
+	<div class="mb-16">
+		<h1 class="text-8xl font-bold mb-8">Users</h1>
+
+		<Code code={users} lang="json" />
+	</div>
+</Layout>

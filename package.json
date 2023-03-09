@@ -1,5 +1,6 @@
 {
 	"name": "flowbite-astro-admin-dashboard",
+	"version": "0.0.2",
 	"private": "true",
 	"description": "A free and open-source admin dashboard template built with Tailwind CSS, Flowbite and Astro",
 	"keywords": [
@@ -37,6 +38,7 @@
 	"dependencies": {
 		"@astrojs/sitemap": "^1.1.0",
 		"@astrojs/tailwind": "^3.0.1",
+		"@faker-js/faker": "^7.6.0",
 		"astro": "^2.0.4",
 		"flowbite": "^1.6.3",
 		"flowbite-typography": "^1.0.3",
