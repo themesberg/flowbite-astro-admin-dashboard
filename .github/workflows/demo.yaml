@@ -14,10 +14,18 @@ env:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+
 jobs:
   deploy:
     name: Deploy demo
     runs-on: ubuntu-20.04
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout repository
