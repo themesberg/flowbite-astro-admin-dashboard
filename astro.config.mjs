@@ -6,9 +6,9 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://themesberg.github.io',
-	base: '/flowbite-astro-admin-dashboard',
+	base: process.env.CI ? '/flowbite-astro-admin-dashboard' : undefined,
 
-	/* Like Vercel, Netlify, GH Pages… Mimicking for dev. server */
+	/* Like Vercel, Netlify,… Mimicking for dev. server */
 	trailingSlash: 'always',
 
 	server: {
