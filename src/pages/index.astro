@@ -1,9 +1,10 @@
 ---
 import Code from 'astro/components/Code.astro';
 import Layout from '../Layout.astro';
+import Confettis from '../components/Confettis.astro';
+
 import AstroLogo from '../assets/astro-icon-light.svg?raw';
 import FlowbiteLogo from '../assets/flowbite-logo.svg?raw';
-import Confettis from '../components/Confettis.astro';
 
 import * as readMe from '../../README.md';
 ---
@@ -18,7 +19,7 @@ import * as readMe from '../../README.md';
 			</div>
 
 			<div class="format format-invert lg:format-lg mt-32">
-				<p class="text-8xl text-slate-200 leading-tight">
+				<p class="text-4xl lg:text-8xl text-slate-200 leading-tight">
 					Hello <a
 						rel="noopener nofollow"
 						href="https://astro.build"
@@ -49,7 +50,7 @@ import * as readMe from '../../README.md';
 		</header>
 
 		<section class="flex justify-center w-full pb-24">
-			<div class="format format-invert">
+			<div class="w-full format format-invert">
 				<Code
 					lang="shell"
 					code={`git clone \\
@@ -59,7 +60,8 @@ https://github.com/themesberg/flowbite-astro-admin-dashboard.git`}
 		</section>
 
 		<article class="flex justify-center w-full">
-			<div class="format format-invert">
+			<div class="readme format format-invert">
+				<h1 class="text-center">{readMe.getHeadings()[0].text}</h1>
 				<readMe.Content />
 				<hr />
 			</div>
@@ -73,3 +75,9 @@ https://github.com/themesberg/flowbite-astro-admin-dashboard.git`}
 		</footer>
 	</div>
 </Layout>
+
+<style>
+	.readme :global(h1:nth-of-type(2)) {
+		display: none;
+	}
+</style>

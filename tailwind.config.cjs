@@ -14,4 +14,6 @@ module.exports = {
 		require('flowbite/plugin'),
 		require('flowbite-typography'),
 	],
+
+	safelist: ['justify-evenly'],
 };

@@ -1,17 +1,24 @@
-# Flowbite Astro Admin Dashboard
+# [Flowbite Astro Admin Dashboard](https://themesberg.github.io/flowbite-astro-admin-dashboard/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fthemesberg%2Fflowbite-astro-admin-dashboard&text=Check%20out%20this%20open-source%20admin%20dashboard%20built%20with%20Flowbite%2C%20Astro%20and%20Tailwind%20CSS)
 
-<!-- # [Flowbite Astro Admin Dashboard](https://flowbite-admin-dashboard.vercel.app) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fthemesberg%2Fflowbite-admin-dashboard&text=Check%20out%20this%20open-source%20admin%20dashboard%20built%20with%20Flowbite%20and%20Tailwind%20CSS) -->
+<!-- NOTE: This is a Tailwind in MD experiment, to make it nice when rendered with Astro -->
+<div class="flex flex-wrap justify-evenly w-full">
+	<a href="https://www.npmjs.com/package/flowbite-admin-dashboard"><img src="https://img.shields.io/badge/version-v0.0.2-blue" alt="version"></a>
+	<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"></a>
+	<a href="https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/github/issues/themesberg/flowbite-astro-admin-dashboard.svg" alt="GitHub issues open"></a>
+	<a href="https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/themesberg/flowbite-astro-admin-dashboard.svg" alt="GitHub issues closed"></a>
+</div>
 
-<!-- [![version](https://img.shields.io/npm/v/flowbite-admin-dashboard)](https://www.npmjs.com/package/flowbite-admin-dashboard) -->
-<!-- [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md) -->
-<!-- [![GitHub issues open](https://img.shields.io/github/issues/themesberg/flowbite-admin-dashboard.svg)](https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aopen+is%3Aissue) -->
-<!-- [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themesberg/flowbite-admin-dashboard.svg)](https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed) -->
-
-[![Flowbite Admin Dashboard Live Preview](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/flowbite-admin-dashboard-preview.png)](https://flowbite-admin-dashboard.vercel.app/)
+[![Flowbite Admin Dashboard Live Preview](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/flowbite-admin-dashboard-preview.png)](https://themesberg.github.io/flowbite-astro-admin-dashboard/)
 
 This project is a free and open-source UI admin dashboard template built with the components from [Flowbite](https://github.com/themesberg/flowbite) and based on the utility-first [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) framework featuring charts, tables, widgets, CRUD layouts, modals, drawers, and more.
 
 This admin dashboard can quickly help you get started building an application for your project using the newest UI/UX development technologies in the open-source area including Tailwind CSS and Flowbite.
+
+<div class="flex flex-wrap justify-evenly w-full">
+	<a href="https://stackblitz.com/github/themesberg/flowbite-astro-admin-dashboard"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt="Open in StackBlitz"></a>
+	<a href="https://codesandbox.io/p/github/themesberg/flowbite-astro-admin-dashboard/main"><img src="https://assets.codesandbox.io/github/button-edit-lime.svg" alt="Open with CodeSandbox"></a>
+	<!-- <a href="https://codespaces.new/themesberg/flowbite-astro-admin-dashboard"><img src="https://github.com/codespaces/badge.svg" alt="Open in GitHub Codespaces"></a> -->
+</div>
 
 > **Warning**: 🚧  Work-in-progress… [Stay tuned](https://twitter.com/Julian_Cataldo).
 
@@ -45,23 +52,23 @@ This product is built using the following widely used technologies:
 
 ## Table of Contents
 
-- [Flowbite Astro Admin Dashboard](#flowbite-astro-admin-dashboard)
-  - [🌀 Built with Flowbite](#-built-with-flowbite)
-  - [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
-  - [📊 15 example pages](#-15-example-pages)
-  - [🧱 Advanced components](#-advanced-components)
-  - [📚 Flowbite documentation](#-flowbite-documentation)
-  - [⚙️ Workflow](#️-workflow)
-  - [Table of Contents](#table-of-contents)
-    - [JavaScript Frameworks](#javascript-frameworks)
-    - [Back-end Frameworks](#back-end-frameworks)
-  - [Browser Support](#browser-support)
-  - [Resources](#resources)
-  - [Reporting Issues](#reporting-issues)
-  - [Technical Support or Questions](#technical-support-or-questions)
-  - [Licensing](#licensing)
-  - [Useful Links](#useful-links)
-  - [Authors](#authors)
+- [Flowbite Astro Admin Dashboard ](#flowbite-astro-admin-dashboard-)
+	- [🌀 Built with Flowbite](#-built-with-flowbite)
+	- [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
+	- [📊 15 example pages](#-15-example-pages)
+	- [🧱 Advanced components](#-advanced-components)
+	- [📚 Flowbite documentation](#-flowbite-documentation)
+	- [⚙️ Workflow](#️-workflow)
+	- [Table of Contents](#table-of-contents)
+		- [JavaScript Frameworks](#javascript-frameworks)
+		- [Back-end Frameworks](#back-end-frameworks)
+	- [Browser Support](#browser-support)
+	- [Resources](#resources)
+	- [Reporting Issues](#reporting-issues)
+	- [Technical Support or Questions](#technical-support-or-questions)
+	- [Licensing](#licensing)
+	- [Useful Links](#useful-links)
+	- [Authors](#authors)
 
 <!-- ## Demo pages
 
@@ -168,14 +175,13 @@ Flowbite Admin Dashboard
 
 At present, we officially aim to support the last two versions of the following browsers:
 
-<!-- NOTE: This is an Tailwind in MD experiment, to make it nice when rendered with Astro -->
 <div class="flex justify-between w-full">
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 </div>
 
 ## Resources
 
-<!-- - Live preview: <https://flowbite-admin-dashboard.vercel.app/> -->
+- Live preview: <https://themesberg.github.io/flowbite-astro-admin-dashboard/>
 
 - Flowbite documentation: <https://flowbite.com/docs/getting-started/introduction/>
 - Tailwind CSS documentation: <https://tailwindcss.com/>
