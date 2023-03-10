@@ -50,25 +50,53 @@ This product is built using the following widely used technologies:
 - Flowbite: [flowbite.com](http://flowbite.com/)
 - Astro: [astro.build](https://astro.build/)
 
+## 🚀 Development
+
+### 🛠 Tools
+
+Efforts have been put on fast **onboarding** and **developer experience**.
+
+This project comes with extensive support for TypeScript, Astro, Tailwind, and VS Code.  
+It comes with sensible defaults, a bit of opinions, plus some tricks to make it plays nice together.
+
+- **TypeScript**: _strictest_ Astro's settings
+- **ESLint**: featuring `astro-eslint-parser` + `eslint-plugin-astro`
+- **Prettier**: featuring `prettier-plugin-astro` (bundled with `astro`)
+- **Editorconfig**: conforming with prettier
+- **VS Code**: extensions recommendations, tooling settings
+- **Tailwind**: Astro integration (using Vite and PostCSS)
+- **Flowbite**: Dependencies (core, typography), settings
+- **GitHub**: a [pre-configured workflow](./.github/workflows/demo.yaml) for deployment (using PNPM cache)
+- **Sandboxes**: project is tested against and fully compatible with web containers
+
+Feel free to hack those settings to cater for your own needs.
+
+| <a href="https://user-images.githubusercontent.com/603498/224380239-0aff9ec2-3436-4fca-a842-230f29dd9677.png"><img width="617" alt="ide-tooling" src="https://user-images.githubusercontent.com/603498/224380239-0aff9ec2-3436-4fca-a842-230f29dd9677.png"></a> | <a href="https://user-images.githubusercontent.com/603498/224353577-51262536-742a-4204-b85f-3f83c209697d.png"><img width="617" alt="gh-workflow" src="https://user-images.githubusercontent.com/603498/224353577-51262536-742a-4204-b85f-3f83c209697d.png"></a> |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+<a href="https://user-images.githubusercontent.com/603498/224374764-dd1f98f8-df45-43c0-97f7-4b89ec427628.png"><img width="617" alt="gh-workflow" src="https://user-images.githubusercontent.com/603498/224374764-dd1f98f8-df45-43c0-97f7-4b89ec427628.png"></a>
+
 ## Table of Contents
 
 - [Flowbite Astro Admin Dashboard ](#flowbite-astro-admin-dashboard-)
-  - [🌀 Built with Flowbite](#-built-with-flowbite)
-  - [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
-  - [📊 15 example pages](#-15-example-pages)
-  - [🧱 Advanced components](#-advanced-components)
-  - [📚 Flowbite documentation](#-flowbite-documentation)
-  - [⚙️ Workflow](#️-workflow)
-  - [Table of Contents](#table-of-contents)
-    - [JavaScript Frameworks](#javascript-frameworks)
-    - [Back-end Frameworks](#back-end-frameworks)
-  - [Browser Support](#browser-support)
-  - [Resources](#resources)
-  - [Reporting Issues](#reporting-issues)
-  - [Technical Support or Questions](#technical-support-or-questions)
-  - [Licensing](#licensing)
-  - [Useful Links](#useful-links)
-  - [Authors](#authors)
+	- [🌀 Built with Flowbite](#-built-with-flowbite)
+	- [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
+	- [📊 15 example pages](#-15-example-pages)
+	- [🧱 Advanced components](#-advanced-components)
+	- [📚 Flowbite documentation](#-flowbite-documentation)
+	- [⚙️ Workflow](#️-workflow)
+	- [🚀 Development](#-development)
+		- [🛠 Tools](#-tools)
+	- [Table of Contents](#table-of-contents)
+		- [JavaScript Frameworks](#javascript-frameworks)
+		- [Back-end Frameworks](#back-end-frameworks)
+	- [Browser Support](#browser-support)
+	- [Resources](#resources)
+	- [Reporting Issues](#reporting-issues)
+	- [Technical Support or Questions](#technical-support-or-questions)
+	- [Licensing](#licensing)
+	- [Useful Links](#useful-links)
+	- [Authors](#authors)
 
 <!-- ## Demo pages
 
