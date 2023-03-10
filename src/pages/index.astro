@@ -7,6 +7,7 @@ import AstroLogo from '../assets/astro-icon-light.svg?raw';
 import FlowbiteLogo from '../assets/flowbite-logo.svg?raw';
 
 import * as readMe from '../../README.md';
+import { SITE_TITLE } from '../consts.js';
 ---
 
 <Layout>
@@ -60,8 +61,11 @@ https://github.com/themesberg/flowbite-astro-admin-dashboard.git`}
 		</section>
 
 		<article class="flex justify-center w-full">
-			<div class="readme format format-invert">
-				<h1 class="text-center">{readMe.getHeadings()[0].text}</h1>
+			<div class="readme format format-invert lg:format-lg">
+				<h1 class="text-center">
+					<!-- {readMe.getHeadings()[0].text} -->
+					{SITE_TITLE}
+				</h1>
 				<readMe.Content />
 				<hr />
 			</div>
@@ -77,6 +81,7 @@ https://github.com/themesberg/flowbite-astro-admin-dashboard.git`}
 </Layout>
 
 <style>
+	/* Override in Markdown H1 title */
 	.readme :global(h1:nth-of-type(2)) {
 		display: none;
 	}

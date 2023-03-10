@@ -8,7 +8,7 @@
 	<a href="https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/themesberg/flowbite-astro-admin-dashboard.svg" alt="GitHub issues closed"></a>
 </div>
 
-[![Flowbite Admin Dashboard Live Preview](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/flowbite-admin-dashboard-preview.png)](https://themesberg.github.io/flowbite-astro-admin-dashboard/)
+<a href="https://themesberg.github.io/flowbite-astro-admin-dashboard/"><img class="w-full rounded-md overflow-hidden" src="https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/flowbite-admin-dashboard-preview.png" alt="Flowbite Admin Dashboard Live Preview"></a>
 
 This project is a free and open-source UI admin dashboard template built with the components from [Flowbite](https://github.com/themesberg/flowbite) and based on the utility-first [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) framework featuring charts, tables, widgets, CRUD layouts, modals, drawers, and more.
 
@@ -65,16 +65,16 @@ It comes with sensible defaults, a bit of opinions, plus some tricks to make it 
 - **Editorconfig**: conforming with prettier
 - **VS Code**: extensions recommendations, tooling settings
 - **Tailwind**: Astro integration (using Vite and PostCSS)
-- **Flowbite**: Dependencies (core, typography), settings
+- **Flowbite**: dependencies (core, typography), settings
 - **GitHub**: a [pre-configured workflow](./.github/workflows/demo.yaml) for deployment (using PNPM cache)
 - **Sandboxes**: project is tested against and fully compatible with web containers
 
 Feel free to hack those settings to cater for your own needs.
 
 <div align="center">
-<a href="https://user-images.githubusercontent.com/603498/224380239-0aff9ec2-3436-4fca-a842-230f29dd9677.png"><img width="617" alt="ide-tooling" src="https://user-images.githubusercontent.com/603498/224380239-0aff9ec2-3436-4fca-a842-230f29dd9677.png"></a>
-<a href="https://user-images.githubusercontent.com/603498/224353577-51262536-742a-4204-b85f-3f83c209697d.png"><img width="617" alt="gh-workflow" src="https://user-images.githubusercontent.com/603498/224353577-51262536-742a-4204-b85f-3f83c209697d.png"></a>
-<a href="https://user-images.githubusercontent.com/603498/224374764-dd1f98f8-df45-43c0-97f7-4b89ec427628.png"><img width="850" alt="gh-workflow" src="https://user-images.githubusercontent.com/603498/224374764-dd1f98f8-df45-43c0-97f7-4b89ec427628.png"></a>
+<a href="https://user-images.githubusercontent.com/603498/224353577-51262536-742a-4204-b85f-3f83c209697d.png"><img class="w-full rounded-md overflow-hidden" alt="gh-workflow" src="https://user-images.githubusercontent.com/603498/224353577-51262536-742a-4204-b85f-3f83c209697d.png"></a>
+<a href="https://user-images.githubusercontent.com/603498/224380239-0aff9ec2-3436-4fca-a842-230f29dd9677.png"><img class="w-full rounded-md overflow-hidden" alt="ide-tooling" src="https://user-images.githubusercontent.com/603498/224380239-0aff9ec2-3436-4fca-a842-230f29dd9677.png"></a>
+<a href="https://user-images.githubusercontent.com/603498/224374764-dd1f98f8-df45-43c0-97f7-4b89ec427628.png"><img class="w-full rounded-md overflow-hidden" alt="gh-workflow" src="https://user-images.githubusercontent.com/603498/224374764-dd1f98f8-df45-43c0-97f7-4b89ec427628.png"></a>
 </div>
 
 ## Table of Contents

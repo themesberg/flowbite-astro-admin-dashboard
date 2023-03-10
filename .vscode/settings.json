@@ -7,7 +7,8 @@
 	/* —————————————————————————————— Tailwind ———————————————————————————————— */
 	"tailwindCSS.includeLanguages": {
 		/* Adds class inlay hints inside `.astro` templates (acts as HTML) */
-		"astro": "html"
+		"astro": "html",
+		"md": "html"
 	},
 
 	/* —————————————————————————————— ESLint —————————————————————————————————— */

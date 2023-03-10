@@ -15,5 +15,5 @@ module.exports = {
 		require('flowbite-typography'),
 	],
 
-	safelist: ['justify-evenly'],
+	safelist: ['justify-evenly', 'overflow-hidden', 'rounded-md'],
 };
