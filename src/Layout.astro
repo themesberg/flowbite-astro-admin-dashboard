@@ -1,7 +1,6 @@
 ---
 import pkg from '../package.json' assert { type: 'json' };
-
-const title = 'Flowbite Astro Admin Dashboard';
+import { SITE_TITLE } from './consts.js';
 ---
 
 <!DOCTYPE html>
@@ -9,7 +8,7 @@ const title = 'Flowbite Astro Admin Dashboard';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{title} — v{pkg.version}</title>
+		<title>{SITE_TITLE} — v{pkg.version}</title>
 
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={pkg.description} />

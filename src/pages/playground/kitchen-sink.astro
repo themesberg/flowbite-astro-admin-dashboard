@@ -1,7 +1,7 @@
 ---
 import Layout from '../../Layout.astro';
 import ProductsCRUD from '../../modules/ProductsCRUD.astro';
-import { getProducts } from '../../operations/getProducts.js';
+import { getProducts } from '../../operations/index.js';
 
 const products = getProducts();
 ---
