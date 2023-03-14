@@ -1,19 +1,58 @@
 ---
+import cn from 'classnames';
+
+import type { CRUDActions } from '../../types.js';
 import Layout from '../../Layout.astro';
 import ProductsCRUD from '../../modules/ProductsCRUD.astro';
-import { getProducts } from '../../operations/index.js';
 
-const products = getProducts();
+const actions: { text: string; action: CRUDActions }[] = [
+	{ text: 'Soft fetch (API)', action: 'fetch' },
+	{ text: 'Hard reload (SSR)', action: 'hardReload' },
+];
 ---
 
 <Layout>
 	<div class="mb-8">
-		<button
-			type="button"
-			class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-			onclick="location.reload()">Refresh</button
-		>
+		{
+			actions.map((button) => (
+				<button
+					type="button"
+					data-action={button.action}
+					class={cn([
+						/* NOTE: This get picked up by Tailwind
+						   extension here, but not with `class:list`.
+							 Handy for making list item variations. ——v */
+						`${button.action === 'fetch' && 'bg-green-600'}`,
+
+						'text-white bg-blue-700 hover:bg-blue-800',
+						'focus:outline-none focus:ring-4 focus:ring-blue-300',
+						'font-medium rounded-full text-sm px-5 py-2.5',
+						'text-center mr-2 mb-2 dark:bg-blue-600',
+						'dark:hover:bg-blue-700 dark:focus:ring-blue-800',
+					])}
+				>
+					{button.text}
+				</button>
+			))
+		}
 	</div>
 
-	<ProductsCRUD products={products} />
+	<ProductsCRUD />
 </Layout>
+
+<script>
+	import type { CRUDActions as CRUDAction } from '../../types.js';
+	const productsCRUD = document.querySelector('products-crud')!;
+
+	const actions: Record<CRUDAction, () => void> = {
+		fetch: () => productsCRUD.update(),
+		hardReload: () => location.reload(),
+	};
+	document
+		.querySelectorAll('[data-action]')
+		.forEach((b) =>
+			b.addEventListener('click', (e) =>
+				actions[(e.target as HTMLElement).dataset.action as CRUDAction](),
+			),
+		);
+</script>
