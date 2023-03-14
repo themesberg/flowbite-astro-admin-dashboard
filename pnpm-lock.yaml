@@ -9,7 +9,6 @@ specifiers:
   '@typescript-eslint/parser': ^5.54.1
   astro: ^2.0.4
   astro-eslint-parser: ^0.11.0
-  classnames: ^2.3.2
   eslint: ^8.35.0
   eslint-config-airbnb-base: ^15.0.0
   eslint-config-airbnb-typescript: ^17.0.0
@@ -29,7 +28,6 @@ dependencies:
   '@astrojs/tailwind': 3.0.1_o7rlocdsudmdrstqcqbafrcodq
   '@faker-js/faker': 7.6.0
   astro: 2.0.17
-  classnames: 2.3.2
   flowbite: 1.6.3
   flowbite-typography: 1.0.3_tailwindcss@3.2.7
   shiki: 0.14.1
@@ -1406,10 +1404,6 @@ packages:
   /ci-info/3.8.0:
     resolution: {integrity: sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==}
     engines: {node: '>=8'}
-    dev: false
-
-  /classnames/2.3.2:
-    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: false
 
   /cli-boxes/3.0.0:

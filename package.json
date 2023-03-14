@@ -40,7 +40,6 @@
 		"@astrojs/tailwind": "^3.0.1",
 		"@faker-js/faker": "^7.6.0",
 		"astro": "^2.0.4",
-		"classnames": "^2.3.2",
 		"flowbite": "^1.6.3",
 		"flowbite-typography": "^1.0.3",
 		"shiki": "^0.14.1",

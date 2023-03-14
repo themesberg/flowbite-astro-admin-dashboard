@@ -6,10 +6,18 @@
 
 	/* —————————————————————————————— Tailwind ———————————————————————————————— */
 	"tailwindCSS.includeLanguages": {
+		/* 
+		   Astro Language Server can handle Tailwind extension communication,
+			 see https://docs.astro.build/en/guides/integrations-guide/tailwind/#configuring-the-integration
+			 But if you had troubles like me, you can force the association here.
+		*/
 		/* Adds class inlay hints inside `.astro` templates (acts as HTML) */
 		"astro": "html",
+		/* Useful for adding IntelliSense to Markdown, too */
 		"md": "html"
 	},
+
+	"tailwindCSS.classAttributes": ["class", "class:list"],
 
 	/* —————————————————————————————— ESLint —————————————————————————————————— */
 	"eslint.validate": [
