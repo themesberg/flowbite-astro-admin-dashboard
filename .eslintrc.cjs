@@ -115,7 +115,7 @@ module.exports = {
 				'import/no-extraneous-dependencies': 'off',
 				'max-lines': [
 					'error',
-					{ max: 160, skipComments: true, skipBlankLines: true },
+					{ max: 250, skipComments: true, skipBlankLines: true },
 				],
 				'no-unused-vars': ['error', { varsIgnorePattern: 'Props' }],
 			},
