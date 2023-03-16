@@ -21,10 +21,15 @@ const products = getProducts();
 
 import { fetchData } from '../utils.js';
 
+const { class: clazz } = Astro.props;
+
 const products = await fetchData('products');
 ---
 
-<products-crud class="overflow-hidden shadow">
+<entities-crud
+	type="products"
+	class:list={['block overflow-hidden shadow', clazz]}
+>
 	<table
 		class="min-w-full divide-y divide-gray-200 table-fixed dark:divide-gray-600"
 	>
@@ -162,42 +167,8 @@ const products = await fetchData('products');
 			}
 		</tbody>
 	</table>
-</products-crud>
+</entities-crud>
 
 <script>
-	import { fetchData } from '../utils.js';
-
-	export class ProductsCRUD extends HTMLElement {
-		#body = this.querySelector('tbody')!;
-		#rows = this.#body.querySelectorAll('tr')!;
-
-		/**
-		 * Fetch new content from API and update DOM text accordingly
-		 */
-		async update() {
-			const newData = await fetchData('products');
-
-			this.#rows.forEach((row, index) =>
-				row.querySelectorAll('data').forEach((binding) => {
-					const valKey = binding.value;
-					const rowData = newData[index];
-					if (!rowData) return;
-					if (!(valKey in rowData)) return;
-
-					binding.innerText =
-						rowData[valKey as keyof typeof rowData].toString();
-				}),
-			);
-
-			console.log('New data received!', newData);
-		}
-	}
-
-	export const tagName = 'products-crud';
-	declare global {
-		interface HTMLElementTagNameMap {
-			[tagName]: ProductsCRUD;
-		}
-	}
-	customElements.define(tagName, ProductsCRUD);
+	import './CrudEntities.client.js';
 </script>
