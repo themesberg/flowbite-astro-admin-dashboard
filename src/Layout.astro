@@ -1,6 +1,8 @@
 ---
 import pkg from '../package.json' assert { type: 'json' };
 import { SITE_TITLE } from './consts.js';
+
+const { class: clazz } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,7 +16,10 @@ import { SITE_TITLE } from './consts.js';
 		<meta name="description" content={pkg.description} />
 	</head>
 	<body
-		class="bg-gradient-to-r from-slate-900 to-slate-800 text-slate-100 mb-20 p-4 lg:p-16"
+		class:list={[
+			'text-slate-100 mb-20',
+			clazz || 'bg-gradient-to-r from-slate-900 to-slate-800',
+		]}
 	>
 		<slot />
 	</body>

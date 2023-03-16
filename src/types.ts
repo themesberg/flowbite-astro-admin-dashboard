@@ -1,4 +1,5 @@
 import type { endpointsToOperations } from './pages/api/[...type].js';
+import type { playgroundActions } from './pages/playground/_actions.js';
 
 export type EndpointsToOperations = typeof endpointsToOperations;
 export type Endpoint = keyof EndpointsToOperations;
@@ -26,4 +27,4 @@ export interface User {
 	status: string;
 }
 
-export type CRUDActions = 'fetch' | 'hardReload';
+export type PlaygroundAction = (typeof playgroundActions)[number];

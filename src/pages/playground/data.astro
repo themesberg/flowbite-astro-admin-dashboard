@@ -1,4 +1,6 @@
 ---
+/* http://localhost:2121/playground/data/ */
+
 import Code from 'astro/components/Code.astro';
 import Layout from '../../Layout.astro';
 import { getUsers, getProducts } from '../../operations/index.js';
@@ -8,7 +10,7 @@ const products = JSON.stringify(getProducts(), null, 2);
 const users = JSON.stringify(getUsers(), null, 2);
 ---
 
-<Layout>
+<Layout class="bg-slate-800 text-slate-100 mb-20 py-16 px-8">
 	<div class="mb-8">
 		<button
 			type="button"

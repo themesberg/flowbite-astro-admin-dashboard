@@ -1,58 +1,127 @@
 ---
-import cn from 'classnames';
+/* http://localhost:2121/playground/kitchen-sink/ */
 
-import type { CRUDActions } from '../../types.js';
 import Layout from '../../Layout.astro';
-import ProductsCRUD from '../../modules/ProductsCRUD.astro';
-
-const actions: { text: string; action: CRUDActions }[] = [
-	{ text: 'Soft fetch (API)', action: 'fetch' },
-	{ text: 'Hard reload (SSR)', action: 'hardReload' },
-];
+import CrudProducts from '../../modules/CrudProducts.astro';
+import FormSignIn from '../../modules/FormSignIn.astro';
+import FormSignUp from '../../modules/FormSignUp.astro';
+import FormForgotPassword from '../../modules/FormForgotPassword.astro';
+import FormResetPassword from '../../modules/FormResetPassword.astro';
+import FormProfileLock from '../../modules/FormProfileLock.astro';
+import CrudUsers from '../../modules/CrudUsers.astro';
+import ErrorMaintenance from '../../modules/ErrorMaintenance.astro';
+import ErrorNotFound from '../../modules/ErrorNotFound.astro';
+import ErrorServer from '../../modules/ErrorServer.astro';
+import TablePricing from '../../modules/PricingPlans.astro';
+import { actions } from './_actions.js';
 ---
 
-<Layout>
-	<div class="mb-8">
+<Layout class="bg-slate-800 text-slate-100 mb-20 py-16 px-8">
+	<h1 class="text-8xl font-bold">🕹&nbsp; Playground</h1>
+
+	<dummy-spacer class="block mb-36"></dummy-spacer>
+
+	<nav
+		class:list={[
+			'flex align-middle justify-center z-50',
+			'top-2 p-4 bg-gray-800/30 w-full sticky border-slate-800',
+			'border-x-red-200 backdrop-blur-md text-white bg-gradient-to-r',
+			'from-slate-700/30 via-slate-700 to-slate-700/30',
+			'hover:from-slate-500/30 hover:to-slate-500/30',
+			'focus:ring-4 focus:outline-none focus:ring-blue-300',
+			'dark:focus:ring-blue-800 shadow-lg shadow-slate-800/50',
+			'dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg',
+			'text-sm px-5 py-2.5 text-center mr-2 mb-2',
+		]}
+	>
 		{
 			actions.map((button) => (
 				<button
 					type="button"
 					data-action={button.action}
-					class={cn([
-						/* NOTE: This get picked up by Tailwind
-						   extension here, but not with `class:list`.
-							 Handy for making list item variations. ——v */
-						`${button.action === 'fetch' && 'bg-green-600'}`,
+					class:list={[
+						'mx-8',
+						button.action === 'hardReloadPage' && 'bg-gray-800',
 
 						'text-white bg-blue-700 hover:bg-blue-800',
 						'focus:outline-none focus:ring-4 focus:ring-blue-300',
 						'font-medium rounded-full text-sm px-5 py-2.5',
-						'text-center mr-2 mb-2 dark:bg-blue-600',
+						'text-center mr-2 my-2 dark:bg-blue-600',
 						'dark:hover:bg-blue-700 dark:focus:ring-blue-800',
-					])}
+					]}
 				>
 					{button.text}
 				</button>
 			))
 		}
-	</div>
+	</nav>
 
-	<ProductsCRUD />
+	<section>
+		<h2 class="text-6xl font-bold m-8 mt-24">CRUD — Products</h2>
+		<CrudProducts class="p-4 lg:p-16" />
+	</section>
+
+	<section>
+		<h2 class="text-6xl font-bold m-8 mt-24">CRUD — Users</h2>
+		<CrudUsers class="p-4 lg:p-16" />
+	</section>
+
+	<section>
+		<h2 class="text-6xl font-bold m-8 mt-24">Forms — User</h2>
+		<div class="flex justify-between">
+			<FormSignIn class="p-4 lg:p-16" />
+			<FormResetPassword class="p-4 lg:p-16" />
+			<FormProfileLock class="p-4 lg:p-16" />
+		</div>
+		<div class="flex justify-between">
+			<FormSignUp class="p-4 lg:p-16" />
+			<FormForgotPassword class="p-4 lg:p-16" />
+		</div>
+	</section>
+
+	<section>
+		<h2 class="text-6xl font-bold m-8 mt-24">CRUD — Users</h2>
+
+		<div class="bg-slate-50 mb-8 lg:p-16">
+			<TablePricing class="p-4 lg:p-16" />
+		</div>
+	</section>
+
+	<section>
+		<h2 class="text-6xl font-bold m-8 mt-24">Pages — Errors</h2>
+		<div class="flex flex-wrap justify-around gap-8">
+			<div class="bg-slate-50 mb-8 lg:p-16">
+				<ErrorMaintenance class="p-4" />
+			</div>
+			<div class="bg-slate-50 mb-8 lg:p-16">
+				<ErrorNotFound class="p-4" />
+			</div>
+			<div class="bg-slate-50 mb-8 lg:p-16">
+				<ErrorServer class="p-4" />
+			</div>
+		</div>
+	</section>
 </Layout>
 
 <script>
-	import type { CRUDActions as CRUDAction } from '../../types.js';
-	const productsCRUD = document.querySelector('products-crud')!;
+	import type { EntitiesCrud } from '../../modules/EntitiesCrud.client.js';
+	import type { PlaygroundAction } from '../../types.js';
 
-	const actions: Record<CRUDAction, () => void> = {
-		fetch: () => productsCRUD.update(),
-		hardReload: () => location.reload(),
+	const playgroundActions: Record<PlaygroundAction, (...args: any) => void> = {
+		refetchCrudData: (crud: EntitiesCrud) => crud.update(),
+		hardReloadPage: () => location.reload(),
 	};
-	document
-		.querySelectorAll('[data-action]')
-		.forEach((b) =>
-			b.addEventListener('click', (e) =>
-				actions[(e.target as HTMLElement).dataset.action as CRUDAction](),
-			),
-		);
+
+	document.querySelectorAll('[data-action]').forEach((b) =>
+		b.addEventListener('click', (e) =>
+			document.querySelectorAll('entities-crud').forEach((crud) => {
+				const name = (e.target as HTMLElement).dataset
+					.action as PlaygroundAction;
+
+				console.log('Action!', name, e.target);
+
+				playgroundActions[name](crud);
+			}),
+		),
+	);
 </script>
