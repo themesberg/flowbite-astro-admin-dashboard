@@ -8,16 +8,18 @@ import FormSignUp from '../../modules/FormSignUp.astro';
 import FormForgotPassword from '../../modules/FormForgotPassword.astro';
 import FormResetPassword from '../../modules/FormResetPassword.astro';
 import FormProfileLock from '../../modules/FormProfileLock.astro';
-import CrudUsers from '../../modules/CrudUsers.astro';
+// import CrudUsers from '../../modules/CrudUsers.astro';
 import ErrorMaintenance from '../../modules/ErrorMaintenance.astro';
 import ErrorNotFound from '../../modules/ErrorNotFound.astro';
 import ErrorServer from '../../modules/ErrorServer.astro';
-import TablePricing from '../../modules/PricingPlans.astro';
+import PricingPlan from '../../modules/PricingPlan.astro';
 import { actions } from './_actions.js';
 ---
 
 <Layout class="bg-slate-800 text-slate-100 mb-20 py-16 px-8">
-	<h1 class="text-8xl font-bold">🕹&nbsp; Playground</h1>
+	<h1 class="text-3xl ml-8 lg:text-4xl xl:text-7xl font-bold">
+		🕹&nbsp;Playground
+	</h1>
 
 	<dummy-spacer class="block mb-36"></dummy-spacer>
 
@@ -57,38 +59,39 @@ import { actions } from './_actions.js';
 	</nav>
 
 	<section>
-		<h2 class="text-6xl font-bold m-8 mt-24">CRUD — Products</h2>
+		<h2 class="text-5xl font-bold m-8 mt-24">CRUD — Products</h2>
 		<CrudProducts class="p-4 lg:p-16" />
 	</section>
 
-	<section>
-		<h2 class="text-6xl font-bold m-8 mt-24">CRUD — Users</h2>
+	<!-- <section>
+		<h2 class="text-5xl font-bold m-8 mt-24">CRUD — Users</h2>
 		<CrudUsers class="p-4 lg:p-16" />
-	</section>
+	</section> -->
 
 	<section>
-		<h2 class="text-6xl font-bold m-8 mt-24">Forms — User</h2>
-		<div class="flex justify-between">
+		<h2 class="text-5xl font-bold m-8 mt-24">Forms — User</h2>
+
+		<div class="flex justify-between flex-wrap">
 			<FormSignIn class="p-4 lg:p-16" />
 			<FormResetPassword class="p-4 lg:p-16" />
 			<FormProfileLock class="p-4 lg:p-16" />
 		</div>
-		<div class="flex justify-between">
+		<div class="mt-12 flex justify-between flex-wrap">
 			<FormSignUp class="p-4 lg:p-16" />
 			<FormForgotPassword class="p-4 lg:p-16" />
 		</div>
 	</section>
 
 	<section>
-		<h2 class="text-6xl font-bold m-8 mt-24">CRUD — Users</h2>
+		<h2 class="text-5xl font-bold m-8 mt-24">Pricing plan</h2>
 
 		<div class="bg-slate-50 mb-8 lg:p-16">
-			<TablePricing class="p-4 lg:p-16" />
+			<PricingPlan class="p-4 lg:p-16" />
 		</div>
 	</section>
 
 	<section>
-		<h2 class="text-6xl font-bold m-8 mt-24">Pages — Errors</h2>
+		<h2 class="text-5xl font-bold m-8 mt-24">Pages — Errors</h2>
 		<div class="flex flex-wrap justify-around gap-8">
 			<div class="bg-slate-50 mb-8 lg:p-16">
 				<ErrorMaintenance class="p-4" />
