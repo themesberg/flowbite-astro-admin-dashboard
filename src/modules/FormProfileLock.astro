@@ -1,5 +1,5 @@
 ---
-import { url } from '../utils.js';
+import { asset, url } from '../utils.js';
 ---
 
 <!-- md:h-screen -->
@@ -10,7 +10,7 @@ import { url } from '../utils.js';
 		href="#"
 		class="flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white"
 	>
-		<img src={url('images/logo.svg')} alt="FlowBite Logo" class="mr-4 h-11" />
+		<img src={asset('images/logo.svg')} alt="FlowBite Logo" class="mr-4 h-11" />
 		<span>Flowbite</span>
 	</a>
 	<!-- Card -->
@@ -21,7 +21,7 @@ import { url } from '../utils.js';
 			<div class="flex space-x-4">
 				<img
 					class="w-8 h-8 rounded-full"
-					src="/images/users/bonnie-green.png"
+					src={asset('/images/users/bonnie-green.png')}
 					alt="Bonnie image"
 				/>
 				<h2 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">
