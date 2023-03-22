@@ -1,10 +1,10 @@
 # Extracted from https://github.com/JulianCataldo/gh-actions/tree/main
 
-name: Deploy to GitHub Pages — [Demo]
+name: Flowbite Admin Dashboard — CI
 
 on:
   push:
-    branches: ['main']
+    branches: ['main', 'next']
 
   workflow_dispatch:
 
@@ -14,10 +14,9 @@ env:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
-
 jobs:
   deploy:
-    name: Deploy demo
+    name: Demo CI
     runs-on: ubuntu-20.04
 
     environment:
@@ -75,10 +74,13 @@ jobs:
       # NOTE: Could be swapped with Vercel, Netlify…
 
       - name: Upload artifact — Demo (dist)
+        # Skip for developement branch.
+        if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./dist
 
       - name: Deploy to GitHub Pages — Demo (dist)
+        if: github.ref == 'refs/heads/main'
         id: deployment
         uses: actions/deploy-pages@v1
