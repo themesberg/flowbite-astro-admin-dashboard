@@ -1,6 +1,6 @@
 {
 	"name": "flowbite-astro-admin-dashboard",
-	"version": "0.0.4",
+	"version": "0.1.0",
 	"private": "true",
 	"description": "A free and open-source admin dashboard template built with Tailwind CSS, Flowbite and Astro",
 	"keywords": [
@@ -58,6 +58,7 @@
 		"eslint-plugin-astro": "^0.23.0",
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-prettier": "^4.2.1",
-		"eslint-plugin-tsdoc": "^0.2.17"
+		"eslint-plugin-tsdoc": "^0.2.17",
+		"tailwind-scrollbar": "^3.0.0"
 	}
 }
