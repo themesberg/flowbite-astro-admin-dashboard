@@ -1,4 +1,4 @@
-import { API_URL } from './consts.js';
+import { API_URL, STATIC_BASE_URL } from './consts.js';
 import type { Endpoint, EndpointsToOperations } from './types.js';
 
 export async function fetchData<Selected extends Endpoint>(endpoint: Selected) {
@@ -12,4 +12,9 @@ export async function fetchData<Selected extends Endpoint>(endpoint: Selected) {
 
 export function url(path: string) {
 	return `${import.meta.env.SITE}${import.meta.env.BASE_URL}/${path}`;
+}
+
+// TODO: Remove old assets from git history (to keep it snappy for Containers).
+export function asset(path: string) {
+	return `${STATIC_BASE_URL}/${path}`;
 }
