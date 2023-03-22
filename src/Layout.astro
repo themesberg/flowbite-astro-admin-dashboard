@@ -36,6 +36,7 @@ const { class: clazz } = Astro.props;
 		class:list={[
 			//
 			clazz,
+			'bg-gray-50 dark:bg-gray-800',
 			'scrollbar scrollbar-thumb-slate-200 scrollbar-track-gray-400',
 			'dark:scrollbar-thumb-slate-900 dark:scrollbar-track-gray-800',
 		]}
@@ -49,18 +50,20 @@ const { class: clazz } = Astro.props;
 				id="main-content"
 				class="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900"
 			>
-				<slot />
-				<FooterDashboard />
+				<div class="min-h-screen">
+					<slot />
+					<FooterDashboard />
+				</div>
 			</div>
+
+			<!-- <FooterMain /> -->
 		</div>
-
-		<!-- <FooterMain /> -->
 	</body>
-</html>
 
-<style is:global>
-	.svg-inline svg {
-		height: 100%;
-		width: 100%;
-	}
-</style>
+	<style is:global>
+		.svg-inline svg {
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+</html>

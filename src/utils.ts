@@ -10,8 +10,8 @@ export async function fetchData<Selected extends Endpoint>(endpoint: Selected) {
 	>;
 }
 
-export function url(path: string) {
-	return `${import.meta.env.SITE}${import.meta.env.BASE_URL}/${path}`;
+export function url(path = '') {
+	return `${import.meta.env.SITE}${import.meta.env.BASE_URL}${path}`;
 }
 
 // TODO: Remove old assets from git history (to keep it snappy for Containers).

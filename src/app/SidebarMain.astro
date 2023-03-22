@@ -4,6 +4,7 @@ import { url } from '../utils';
 /* eslint max-lines: 'off' */
 ---
 
+<!-- TODO: Dynamic dropdowns -->
 <aside
 	id="sidebar"
 	class="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 hidden w-64 h-full pt-16 font-normal duration-75 lg:flex transition-width"
@@ -89,7 +90,7 @@ import { url } from '../utils';
 							<span class="ml-3" sidebar-toggle-item>Dashboard</span>
 						</a>
 					</li>
-					<li>
+					<li class="hidden">
 						<button
 							type="button"
 							class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
@@ -123,17 +124,17 @@ import { url } from '../utils';
 									clip-rule="evenodd"></path></svg
 							>
 						</button>
-						<ul id="dropdown-layouts" class="hidden py-2 space-y-2">
+						<ul id="dropdown-layouts" class="_hidden py-2 space-y-2">
 							<li>
 								<a
-									href="layouts/stacked/"
+									href={url('layouts/stacked')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Stacked</a
 								>
 							</li>
 							<li>
 								<a
-									href="layouts/sidebar/"
+									href={url('layouts/sidebar')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Sidebar</a
 								>
@@ -180,26 +181,28 @@ import { url } from '../utils';
 							<!-- if not (eq .Params.group crud) }}hidden {{ end }} -->
 							<li>
 								<!-- {{ if eq $page_slug "products" }} -->
+								<!-- bg-gray-100 dark:bg-gray-700 -->
 								<a
-									href="crud/products/"
-									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 bg-gray-100 dark:bg-gray-700"
+									href={url('crud/products')}
+									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Products</a
 								>
 							</li>
-							<li>
+							<li class="hidden">
 								<!--  {{ if eq $page_slug "users" }} -->
+								<!-- bg-gray-100 dark:bg-gray-700 -->
 								<a
-									href="crud/users/"
-									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 bg-gray-100 dark:bg-gray-700"
+									href={url('crud/users')}
+									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Users</a
 								>
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li class="hidden">
 						<!-- {{ if eq $page_slug "settings" }} -->
 						<a
-							href="settings/"
+							href={url('settings')}
 							class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700 bg-gray-100 dark:bg-gray-700"
 						>
 							<svg
@@ -251,31 +254,31 @@ import { url } from '../utils';
 									clip-rule="evenodd"></path></svg
 							>
 						</button>
-						<ul id="dropdown-pages" class="hidden py-2 space-y-2">
+						<ul id="dropdown-pages" class="_hidden py-2 space-y-2">
 							<li>
 								<a
-									href="pages/pricing/"
+									href={url('pages/pricing')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Pricing</a
 								>
 							</li>
 							<li>
 								<a
-									href="pages/maintenance/"
+									href={url('pages/maintenance')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Maintenance</a
 								>
 							</li>
 							<li>
 								<a
-									href="pages/404/"
+									href={url('pages/404')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>404 not found</a
 								>
 							</li>
 							<li>
 								<a
-									href="pages/500/"
+									href={url('pages/500')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>500 server error</a
 								>
@@ -315,45 +318,45 @@ import { url } from '../utils';
 									clip-rule="evenodd"></path></svg
 							>
 						</button>
-						<ul id="dropdown-auth" class="hidden py-2 space-y-2">
+						<ul id="dropdown-auth" class="_hidden py-2 space-y-2">
 							<li>
 								<a
-									href="authentication/sign-in/"
+									href={url('authentication/sign-in')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Sign in</a
 								>
 							</li>
 							<li>
 								<a
-									href="authentication/sign-up/"
+									href={url('authentication/sign-up')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Sign up</a
 								>
 							</li>
 							<li>
 								<a
-									href="authentication/forgot-password/"
+									href={url('authentication/forgot-password')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Forgot password</a
 								>
 							</li>
 							<li>
 								<a
-									href="authentication/reset-password/"
+									href={url('authentication/reset-password')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Reset password</a
 								>
 							</li>
 							<li>
 								<a
-									href="authentication/profile-lock/"
+									href={url('authentication/profile-lock')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Profile lock</a
 								>
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li class="hidden">
 						<button
 							type="button"
 							class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
@@ -393,17 +396,19 @@ import { url } from '../utils';
 						<ul id="dropdown-playground" class="space-y-2 py-2">
 							<li>
 								<!-- {{ if eq $page_slug "stacked" }} -->
+								<!--  bg-gray-100 dark:bg-gray-700 -->
 								<a
-									href="playground/stacked/"
-									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 bg-gray-100 dark:bg-gray-700"
+									href={url('playground/stacked')}
+									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Stacked</a
 								>
 							</li>
 							<li>
 								<!-- {{ if eq $page_slug "sidebar" }} -->
+								<!--  bg-gray-100 dark:bg-gray-700 -->
 								<a
-									href="playground/sidebar/"
-									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700 bg-gray-100 dark:bg-gray-700"
+									href={url('playground/sidebar')}
+									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Sidebar</a
 								>
 							</li>
@@ -412,7 +417,7 @@ import { url } from '../utils';
 				</ul>
 				<div class="pt-2 space-y-2">
 					<a
-						href="https://github.com/themesberg/flowbite-admin-dashboard"
+						href={'https://github.com/themesberg/flowbite-admin-dashboard'}
 						target="_blank"
 						class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700"
 					>

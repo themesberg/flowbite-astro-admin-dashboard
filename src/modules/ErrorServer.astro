@@ -1,12 +1,12 @@
 ---
-import { url } from '../utils.js';
+import { asset, url } from '../utils.js';
 ---
 
 <div
 	class="flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900"
 >
 	<div class="block md:max-w-lg">
-		<img src={url('images/illustrations/500.svg')} alt="astronaut image" />
+		<img src={asset('images/illustrations/500.svg')} alt="astronaut image" />
 	</div>
 	<div class="text-center xl:max-w-4xl">
 		<h1
@@ -21,7 +21,7 @@ import { url } from '../utils.js';
 			finish your coffee.
 		</p>
 		<a
-			href="#"
+			href={url('')}
 			class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-3 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
 		>
 			<svg
