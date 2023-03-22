@@ -1,5 +1,10 @@
 ---
 import pkg from '../package.json' assert { type: 'json' };
+import FooterDashboard from './app/FooterDashboard.astro';
+// import FooterMain from './app/FooterMain.astro';
+// import NavBarMain from './app/NavBarMain.astro';
+import NavBarDashboard from './app/NavBarDashboard.astro';
+import SidebarMain from './app/SidebarMain.astro';
 import { SITE_TITLE } from './consts.js';
 
 const { class: clazz } = Astro.props;
@@ -14,14 +19,40 @@ const { class: clazz } = Astro.props;
 
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={pkg.description} />
+
+		<script is:inline>
+			if (
+				localStorage.getItem('color-theme') === 'dark' ||
+				(!('color-theme' in localStorage) &&
+					window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+		</script>
 	</head>
 	<body
 		class:list={[
-			'text-slate-100 mb-20',
-			clazz || 'bg-gradient-to-r from-slate-900 to-slate-800',
+			//
+			clazz,
 		]}
 	>
-		<slot />
+		<!-- <NavBarMain /> -->
+		<NavBarDashboard />
+		<SidebarMain />
+
+		<div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
+			<div
+				id="main-content"
+				class="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900"
+			>
+				<slot />
+				<FooterDashboard />
+			</div>
+		</div>
+
+		<!-- <FooterMain /> -->
 	</body>
 </html>
 

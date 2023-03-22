@@ -7,6 +7,8 @@ module.exports = {
 		'./node_modules/flowbite/**/*.js',
 	],
 
+	darkMode: 'media',
+
 	theme: {
 		extend: {
 			colors: {
