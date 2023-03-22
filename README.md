@@ -80,24 +80,25 @@ Feel free to hack those settings to cater for your own needs.
 ## Table of Contents
 
 - [Flowbite Astro Admin Dashboard ](#flowbite-astro-admin-dashboard-)
-	- [🌀 Built with Flowbite](#-built-with-flowbite)
-	- [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
-	- [📊 15 example pages](#-15-example-pages)
-	- [🧱 Advanced components](#-advanced-components)
-	- [📚 Flowbite documentation](#-flowbite-documentation)
-	- [⚙️ Workflow](#️-workflow)
-	- [🚀 Development](#-development)
-		- [🛠 Tools](#-tools)
-	- [Table of Contents](#table-of-contents)
-		- [JavaScript Frameworks](#javascript-frameworks)
-		- [Back-end Frameworks](#back-end-frameworks)
-	- [Browser Support](#browser-support)
-	- [Resources](#resources)
-	- [Reporting Issues](#reporting-issues)
-	- [Technical Support or Questions](#technical-support-or-questions)
-	- [Licensing](#licensing)
-	- [Useful Links](#useful-links)
-	- [Authors](#authors)
+  - [🌀 Built with Flowbite](#-built-with-flowbite)
+  - [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
+  - [📊 15 example pages](#-15-example-pages)
+  - [🧱 Advanced components](#-advanced-components)
+  - [📚 Flowbite documentation](#-flowbite-documentation)
+  - [⚙️ Workflow](#️-workflow)
+  - [🚀 Development](#-development)
+    - [🛠 Tools](#-tools)
+  - [Table of Contents](#table-of-contents)
+    - [JavaScript Frameworks](#javascript-frameworks)
+    - [Back-end Frameworks](#back-end-frameworks)
+  - [Project Structure](#project-structure)
+  - [Browser Support](#browser-support)
+  - [Resources](#resources)
+  - [Reporting Issues](#reporting-issues)
+  - [Technical Support or Questions](#technical-support-or-questions)
+  - [Licensing](#licensing)
+  - [Useful Links](#useful-links)
+  - [Authors](#authors)
 
 <!-- ## Demo pages
 
@@ -175,30 +176,31 @@ Flowbite has a great integration with most of the back-end frameworks because it
 - [🐸 Using Flowbite with Django](https://flowbite.com/docs/getting-started/django/)
 - [🌶 Using Flowbite with Flask](https://flowbite.com/docs/getting-started/flask/)
 
-<!-- ## File Structure
+## Project Structure
 
-Within the download you'll find the following directories and files:
+After cloning this repository, you'll find the following (simplified) structure:
 
 ```
-Flowbite Admin Dashboard
-.
-├── LICENSE
-├── README.md
-├── config.yml
-├── content
 ├── data
-├── layouts
-├── node_modules
-├── package-lock.json
-├── package.json
-├── postcss.config.js
-├── resources
-├── src
-├── static
-├── tailwind.config.js
-├── webpack.config.js
-└── yarn.lock
-``` -->
+│   └── <Static data>                    # Mocked source for server
+└── src
+    ├── Layout.astro                     # Main (default) layout
+    ├── app
+    │   └── <App-wide modules>
+    ├── assets
+    │   └── <Transformable assets>
+    ├── components
+    │   └── <Atomic components>
+    ├── consts.ts                        # App-wide constants
+    ├── modules
+    │   └── <Sets of components>
+    ├── operations
+    │   └── <Server-side CRUD actions>
+    └── pages
+        ├── api
+        │   └── [...type].ts             # CRUD endpoints to server ops.
+        └── <File-based client routes>
+```
 
 ## Browser Support
 
