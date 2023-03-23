@@ -87,7 +87,7 @@ module.exports = {
 		'overflow-hidden',
 		'rounded-md',
 
-		// —
+		// From the Hugo Dashboard
 		'w-64',
 		'w-1/2',
 		'rounded-l-lg',
@@ -102,6 +102,9 @@ module.exports = {
 		'shadow-lg',
 		'bg-opacity-50',
 		'dark:bg-opacity-80',
+
+		// For Astro one
+		'grid',
 	],
 
 	plugins: [
