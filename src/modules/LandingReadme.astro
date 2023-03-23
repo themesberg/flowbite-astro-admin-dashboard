@@ -54,7 +54,7 @@ import { SITE_TITLE } from '../consts.js';
 	<section class="flex justify-center w-full pb-24">
 		<div class="w-full format format-invert">
 			<Code
-				lang="shell"
+				lang={'powershell' /* Looks cool */}
 				code={`git clone \\
 https://github.com/themesberg/flowbite-astro-admin-dashboard.git`}
 			/>
@@ -84,5 +84,10 @@ https://github.com/themesberg/flowbite-astro-admin-dashboard.git`}
 	/* Override in Markdown H1 title */
 	.readme :global(h1:nth-of-type(2)) {
 		display: none;
+	}
+
+	.svg-inline :global(svg) {
+		height: 100%;
+		width: 100%;
 	}
 </style>

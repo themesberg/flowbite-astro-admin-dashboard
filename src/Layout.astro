@@ -63,9 +63,13 @@ const { class: clazz } = Astro.props;
 	</body>
 
 	<style is:global>
-		.svg-inline svg {
-			height: 100%;
-			width: 100%;
-		}
+		/* TODO: Find and prune unused variants */
+		@import '@fontsource/inter/300.css';
+		@import '@fontsource/inter/400.css';
+		@import '@fontsource/inter/500.css';
+		@import '@fontsource/inter/600.css';
+		@import '@fontsource/inter/700.css';
+		@import '@fontsource/inter/800.css';
+		@import '@fontsource/inter/900.css';
 	</style>
 </html>

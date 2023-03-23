@@ -4,6 +4,7 @@ specifiers:
   '@astrojs/sitemap': ^1.1.0
   '@astrojs/tailwind': ^3.0.1
   '@faker-js/faker': ^7.6.0
+  '@fontsource/inter': ^4.5.15
   '@types/eslint': ^8.21.1
   '@typescript-eslint/eslint-plugin': ^5.54.1
   '@typescript-eslint/parser': ^5.54.1
@@ -28,6 +29,7 @@ dependencies:
   '@astrojs/sitemap': 1.1.0
   '@astrojs/tailwind': 3.0.1_o7rlocdsudmdrstqcqbafrcodq
   '@faker-js/faker': 7.6.0
+  '@fontsource/inter': 4.5.15
   astro: 2.0.17
   flowbite: 1.6.3
   flowbite-typography: 1.0.3_tailwindcss@3.2.7
@@ -630,6 +632,10 @@ packages:
   /@faker-js/faker/7.6.0:
     resolution: {integrity: sha512-XK6BTq1NDMo9Xqw/YkYyGjSsg44fbNwYRx7QK2CuoQgyy+f1rrTDHoExVM5PsyXCtfl2vs2vVJ0MN0yN6LppRw==}
     engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    dev: false
+
+  /@fontsource/inter/4.5.15:
+    resolution: {integrity: sha512-FzleM9AxZQK2nqsTDtBiY0PMEVWvnKnuu2i09+p6DHvrHsuucoV2j0tmw+kAT3L4hvsLdAIDv6MdGehsPIdT+Q==}
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
