@@ -10,23 +10,29 @@ const products = JSON.stringify(getProducts(), null, 2);
 const users = JSON.stringify(getUsers(), null, 2);
 ---
 
-<Layout class="bg-slate-800 text-slate-100 mb-20 py-16 px-8">
-	<div class="mb-8">
-		<button
-			type="button"
-			class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-			onclick="location.reload()">Refresh</button
-		>
-	</div>
+<Layout class="bg-slate-800 text-slate-100">
+	<div class="p-16">
+		<h1 class="text-3xl ml-8 lg:text-4xl xl:text-7xl font-bold">
+			🕹&nbsp;Playground — API data
+		</h1>
 
-	<div class="mb-16">
-		<h1 class="text-8xl font-bold mb-8">Products</h1>
+		<div class="mt-24 mb-8">
+			<button
+				type="button"
+				class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+				onclick="location.reload()">Refresh</button
+			>
+		</div>
 
-		<Code code={products} lang="json" />
-	</div>
-	<div class="mb-16">
-		<h1 class="text-8xl font-bold mb-8">Users</h1>
+		<div class="mb-16">
+			<h1 class="text-6xl font-bold mb-8">Products</h1>
 
-		<Code code={users} lang="json" />
+			<Code code={products} lang="json" />
+		</div>
+		<div class="mb-16">
+			<h1 class="text-6xl font-bold mb-8">Users</h1>
+
+			<Code code={users} lang="json" />
+		</div>
 	</div>
 </Layout>

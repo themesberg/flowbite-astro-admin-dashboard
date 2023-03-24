@@ -16,7 +16,8 @@ import { url } from '../utils';
 		<div
 			class:list={[
 				'flex flex-col flex-1 pt-5 pb-4 overflow-y-auto',
-				'scrollbar scrollbar-thumb-slate-200 scrollbar-track-gray-400',
+				'scrollbar scrollbar-w-2 scrollbar-thumb-rounded-[0.1667rem]',
+				'scrollbar-thumb-slate-200 scrollbar-track-gray-400',
 				'dark:scrollbar-thumb-slate-900 dark:scrollbar-track-gray-800',
 			]}
 		>
@@ -356,7 +357,7 @@ import { url } from '../utils';
 							</li>
 						</ul>
 					</li>
-					<li class="hidden">
+					<li>
 						<button
 							type="button"
 							class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
@@ -394,22 +395,32 @@ import { url } from '../utils';
 						</button>
 						<!--  {{ if not (eq .Params.group "playground") }}hidden {{ end }} -->
 						<ul id="dropdown-playground" class="space-y-2 py-2">
-							<li>
+							<li class="hidden">
 								<!-- {{ if eq $page_slug "stacked" }} -->
 								<!--  bg-gray-100 dark:bg-gray-700 -->
-								<a
+								<!-- <a
 									href={url('playground/stacked')}
 									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Stacked</a
+								> -->
+								<a
+									href={url('playground/kitchen-sink')}
+									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"
+									>Kitchen Sink</a
 								>
 							</li>
 							<li>
 								<!-- {{ if eq $page_slug "sidebar" }} -->
 								<!--  bg-gray-100 dark:bg-gray-700 -->
-								<a
+								<!-- <a
 									href={url('playground/sidebar')}
 									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Sidebar</a
+								> -->
+								<a
+									href={url('playground/data')}
+									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"
+									>API data</a
 								>
 							</li>
 						</ul>
