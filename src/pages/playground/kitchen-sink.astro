@@ -13,6 +13,7 @@ import ErrorMaintenance from '../../modules/ErrorMaintenance.astro';
 import ErrorNotFound from '../../modules/ErrorNotFound.astro';
 import ErrorServer from '../../modules/ErrorServer.astro';
 import PricingPlan from '../../modules/PricingPlan.astro';
+
 import { actions } from './_actions.js';
 ---
 
@@ -107,11 +108,11 @@ import { actions } from './_actions.js';
 </Layout>
 
 <script>
-	import type { EntitiesCrud } from '../../modules/EntitiesCrud.client.js';
+	import type { CrudEntities } from '../../modules/CrudEntities.client.js';
 	import type { PlaygroundAction } from '../../types.js';
 
 	const playgroundActions: Record<PlaygroundAction, (...args: any) => void> = {
-		refetchCrudData: (crud: EntitiesCrud) => crud.update(),
+		refetchCrudData: (crud: CrudEntities) => crud.update(),
 		hardReloadPage: () => location.reload(),
 	};
 

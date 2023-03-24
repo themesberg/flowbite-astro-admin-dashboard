@@ -4,7 +4,7 @@ import type { Endpoint } from '../types.js';
 import { fetchData } from '../utils.js';
 import { endpointsToOperations } from '../pages/api/[...type].js';
 
-export class EntitiesCrud extends HTMLElement {
+export class CrudEntities extends HTMLElement {
 	#body = this.querySelector('tbody')!;
 
 	#rows = this.#body.querySelectorAll('tr')!;
@@ -49,7 +49,7 @@ export class EntitiesCrud extends HTMLElement {
 export const tagName = 'entities-crud';
 declare global {
 	interface HTMLElementTagNameMap {
-		[tagName]: EntitiesCrud;
+		[tagName]: CrudEntities;
 	}
 }
-customElements.define(tagName, EntitiesCrud);
+customElements.define(tagName, CrudEntities);

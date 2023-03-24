@@ -21,6 +21,13 @@ const { class: clazz } = Astro.props;
 		<meta name="description" content={pkg.description} />
 		<meta name="" content={pkg.description} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+
+		<meta
+			name="author"
+			content="Julian Cataldo, Zoltán Szőgyényi, Robert Tanislav"
+		/>
+		<meta name="copyright" content="MIT" />
 
 		<script is:inline>
 			if (
@@ -61,15 +68,28 @@ const { class: clazz } = Astro.props;
 			<!-- <FooterMain /> -->
 		</div>
 	</body>
-
-	<style is:global>
-		/* TODO: Find and prune unused variants */
-		@import '@fontsource/inter/300.css';
-		@import '@fontsource/inter/400.css';
-		@import '@fontsource/inter/500.css';
-		@import '@fontsource/inter/600.css';
-		@import '@fontsource/inter/700.css';
-		@import '@fontsource/inter/800.css';
-		@import '@fontsource/inter/900.css';
-	</style>
 </html>
+
+<style>
+	@font-face {
+		font-family: 'Inter';
+		font-style: normal;
+		font-display: swap;
+		font-weight: 400;
+		src: url('@fontsource/inter/files/inter-latin-400-normal.woff2');
+	}
+	@font-face {
+		font-family: 'Inter';
+		font-style: normal;
+		font-display: swap;
+		font-weight: 600;
+		src: url('@fontsource/inter/files/inter-latin-600-normal.woff2');
+	}
+	@font-face {
+		font-family: 'Inter';
+		font-style: normal;
+		font-display: swap;
+		font-weight: 700;
+		src: url('@fontsource/inter/files/inter-latin-700-normal.woff2');
+	}
+</style>
