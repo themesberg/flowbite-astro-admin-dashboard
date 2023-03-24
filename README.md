@@ -52,6 +52,41 @@ This product is built using the following widely used technologies:
 
 ## 🚀 Development
 
+### Project Structure
+
+After cloning this repository, you'll find the following (simplified) structure:
+
+```
+├── 💧 data
+│   └── **/*.json                        # Satic data sources for REST etc.
+│
+└── src
+    ├── ✨ consts.ts                     # Application-wide constants
+    │
+    ├── 📜 Layout.astro                  # Main (default) application layout
+    │
+    ├── 🌠 assets
+    │   └── **/*.{svg,…}                 # Transformable assets
+    │
+    ├── 🧱 elements
+    │   └── **/*.astro                   # Simple, atomic components
+    │
+    ├── 🧱 global
+    │   └── **/*.astro                   # Application-wide components
+    │
+    ├── 🧱 modules
+    │   └── **/*.astro                   # Complex sets of components
+    │
+    ├── 🚀 operations
+    │   └── *.ts                         # Server-side CRUD actions
+    │
+    └── 📑 pages
+        ├── **/*.astro                   # File-based client routes
+        │
+        └── 🌐 api
+            └── [...type].ts             # REST endpoints for CRUD ops.
+```
+
 ### 🛠 Tools
 
 Efforts have been put on fast **onboarding** and **developer experience**.
@@ -87,11 +122,11 @@ Feel free to hack those settings to cater for your own needs.
   - [📚 Flowbite documentation](#-flowbite-documentation)
   - [⚙️ Workflow](#️-workflow)
   - [🚀 Development](#-development)
+    - [Project Structure](#project-structure)
     - [🛠 Tools](#-tools)
   - [Table of Contents](#table-of-contents)
     - [JavaScript Frameworks](#javascript-frameworks)
     - [Back-end Frameworks](#back-end-frameworks)
-  - [Project Structure](#project-structure)
   - [Browser Support](#browser-support)
   - [Resources](#resources)
   - [Reporting Issues](#reporting-issues)
@@ -175,32 +210,6 @@ Flowbite has a great integration with most of the back-end frameworks because it
 - [🚊 Using Flowbite with Ruby on Rails 7](https://flowbite.com/docs/getting-started/rails/)
 - [🐸 Using Flowbite with Django](https://flowbite.com/docs/getting-started/django/)
 - [🌶 Using Flowbite with Flask](https://flowbite.com/docs/getting-started/flask/)
-
-## Project Structure
-
-After cloning this repository, you'll find the following (simplified) structure:
-
-```
-├── data
-│   └── <Static data>                    # Mocked source for server
-└── src
-    ├── Layout.astro                     # Main (default) layout
-    ├── app
-    │   └── <App-wide modules>
-    ├── assets
-    │   └── <Transformable assets>
-    ├── components
-    │   └── <Atomic components>
-    ├── consts.ts                        # App-wide constants
-    ├── modules
-    │   └── <Sets of components>
-    ├── operations
-    │   └── <Server-side CRUD actions>
-    └── pages
-        ├── api
-        │   └── [...type].ts             # CRUD endpoints to server ops.
-        └── <File-based client routes>
-```
 
 ## Browser Support
 
