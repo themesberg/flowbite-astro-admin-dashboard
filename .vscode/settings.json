@@ -33,5 +33,9 @@
 	"prettier.documentSelectors": ["**/*.astro"],
 	"[astro]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+	},
+
+	/* —————————————————————————————— Misc. ———————————————————————————————— */
+
+	"markdown.extension.toc.levels": "2..6"
 }
