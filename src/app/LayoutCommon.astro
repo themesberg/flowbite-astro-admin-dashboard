@@ -1,5 +1,6 @@
 ---
 import pkg from '../../package.json' assert { type: 'json' };
+import { url } from '../lib/data.js';
 
 import { SITE_TITLE } from './constants.js';
 
@@ -16,8 +17,12 @@ const { class: clazz } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={pkg.description} />
 		<meta name="" content={pkg.description} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+		<link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
+		<link
+			rel="sitemap"
+			type="application/xml"
+			href={url('sitemap-index.xml')}
+		/>
 
 		<meta
 			name="author"
@@ -57,5 +62,5 @@ const { class: clazz } = Astro.props;
 </script>
 
 <style is:global>
-	@import 'inter-ui/inter.css';
+	@import url('https://fonts.cdnfonts.com/css/inter');
 </style>
