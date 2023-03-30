@@ -1,18 +1,18 @@
 ---
 /* http://localhost:2121/playground/kitchen-sink/ */
 
-import Layout from '../../Layout.astro';
-import CrudProducts from '../../modules/CrudProducts.astro';
-import FormSignIn from '../../modules/FormSignIn.astro';
-import FormSignUp from '../../modules/FormSignUp.astro';
-import FormForgotPassword from '../../modules/FormForgotPassword.astro';
-import FormResetPassword from '../../modules/FormResetPassword.astro';
-import FormProfileLock from '../../modules/FormProfileLock.astro';
-// import CrudUsers from '../../modules/CrudUsers.astro';
-import ErrorMaintenance from '../../modules/ErrorMaintenance.astro';
-import ErrorNotFound from '../../modules/ErrorNotFound.astro';
-import ErrorServer from '../../modules/ErrorServer.astro';
-import PricingPlan from '../../modules/PricingPlan.astro';
+import Layout from '../../app/LayoutDefault.astro';
+import CrudProducts from '../../views/CrudProducts.astro';
+import FormSignIn from '../../views/FormSignIn.astro';
+import FormSignUp from '../../views/FormSignUp.astro';
+import FormForgotPassword from '../../views/FormForgotPassword.astro';
+import FormResetPassword from '../../views/FormResetPassword.astro';
+import FormProfileLock from '../../views/FormProfileLock.astro';
+// import CrudUsers from '../../views/CrudUsers.astro';
+import ErrorMaintenance from '../../views/ErrorMaintenance.astro';
+import ErrorNotFound from '../../views/ErrorNotFound.astro';
+import ErrorServer from '../../views/ErrorServer.astro';
+import PricingPlan from '../../views/PricingPlan.astro';
 
 import { actions } from './_actions.js';
 ---
@@ -108,7 +108,7 @@ import { actions } from './_actions.js';
 </Layout>
 
 <script>
-	import type { CrudEntities } from '../../modules/CrudEntities.client.js';
+	import type { CrudEntities } from '../../views/CrudEntities.client.js';
 	import type { PlaygroundAction } from '../../types.js';
 
 	const playgroundActions: Record<PlaygroundAction, (...args: any) => void> = {

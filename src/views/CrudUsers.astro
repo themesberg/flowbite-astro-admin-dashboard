@@ -1,5 +1,5 @@
 ---
-import { fetchData } from '../utils.js';
+import { fetchData } from '../lib/data.js';
 
 const { class: clazz } = Astro.props;
 const users = await fetchData('users');

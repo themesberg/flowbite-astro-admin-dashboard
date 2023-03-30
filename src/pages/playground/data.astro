@@ -2,8 +2,8 @@
 /* http://localhost:2121/playground/data/ */
 
 import Code from 'astro/components/Code.astro';
-import Layout from '../../Layout.astro';
-import { getUsers, getProducts } from '../../operations/index.js';
+import Layout from '../../app/LayoutDefault.astro';
+import { getUsers, getProducts } from '../../services/index.js';
 
 const products = JSON.stringify(getProducts(), null, 2);
 

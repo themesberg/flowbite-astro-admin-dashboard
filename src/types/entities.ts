@@ -1,5 +1,5 @@
-import type { endpointsToOperations } from './pages/api/[...type].js';
-import type { playgroundActions } from './pages/playground/_actions.js';
+import type { endpointsToOperations } from '../pages/api/[...entity].js';
+import type { playgroundActions } from '../pages/playground/_actions.js';
 
 export type EndpointsToOperations = typeof endpointsToOperations;
 export type Endpoint = keyof EndpointsToOperations;
