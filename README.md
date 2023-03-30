@@ -8,19 +8,16 @@
 	<a href="https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/themesberg/flowbite-astro-admin-dashboard.svg" alt="GitHub issues closed"></a>
 </div>
 
-<a href="https://themesberg.github.io/flowbite-astro-admin-dashboard/"><img class="w-full rounded-md overflow-hidden" src="https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/flowbite-admin-dashboard-preview.png" alt="Flowbite Admin Dashboard Live Preview"></a>
+<a class="hidden" href="https://themesberg.github.io/flowbite-astro-admin-dashboard/"><img class="w-full rounded-md overflow-hidden" src="https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/flowbite-admin-dashboard-preview.png" alt="Flowbite Admin Dashboard Live Preview"></a>
 
 This project is a free and open-source UI admin dashboard template built with the components from [Flowbite](https://github.com/themesberg/flowbite) and based on the utility-first [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) framework featuring charts, tables, widgets, CRUD layouts, modals, drawers, and more.
 
 This admin dashboard can quickly help you get started building an application for your project using the newest UI/UX development technologies in the open-source area including Tailwind CSS and Flowbite.
 
-<div class="flex flex-wrap justify-evenly w-full">
+<div class="flex flex-wrap justify-evenly w-full my-16">
 	<a href="https://stackblitz.com/github/themesberg/flowbite-astro-admin-dashboard"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt="Open in StackBlitz"></a>
 	<a href="https://codesandbox.io/p/github/themesberg/flowbite-astro-admin-dashboard/main"><img src="https://assets.codesandbox.io/github/button-edit-lime.svg" alt="Open with CodeSandbox"></a>
-	<!-- <a href="https://codespaces.new/themesberg/flowbite-astro-admin-dashboard"><img src="https://github.com/codespaces/badge.svg" alt="Open in GitHub Codespaces"></a> -->
 </div>
-
-> **Warning**: 🚧  Work-in-progress… [Stay tuned](https://twitter.com/Julian_Cataldo).
 
 ## 🌀 Built with Flowbite
 
@@ -52,27 +49,38 @@ This product is built using the following widely used technologies:
 
 ## 🚀 Development
 
-### Project Structure
+<!-- ### Project Structure
 
 After cloning this repository, you'll find the following (simplified) structure:
 
 ```
+
+│   ├── app
+│   ├── assets
+│   ├── lib
+│   ├── pages
+│   ├── services
+│   ├── types
+│   ├── ui
+│   └── views
+
+#    ├── ✨ consts.ts                     # Application-wide constants
+    ├── 📜 Layout.astro                  # Main (default) application layout
+
 ├── 💧 data
 │   └── **/*.json                        # Satic data sources for REST etc.
 │
 └── src
-    ├── ✨ consts.ts                     # Application-wide constants
     │
-    ├── 📜 Layout.astro                  # Main (default) application layout
+    │
+    ├── 🧱 app
+    │   └── **/*.astro                   # Application-wide components
     │
     ├── 🌠 assets
     │   └── **/*.{svg,…}                 # Transformable assets
     │
     ├── 🧱 elements
     │   └── **/*.astro                   # Simple, atomic components
-    │
-    ├── 🧱 global
-    │   └── **/*.astro                   # Application-wide components
     │
     ├── 🧱 modules
     │   └── **/*.astro                   # Complex sets of components
@@ -85,7 +93,7 @@ After cloning this repository, you'll find the following (simplified) structure:
         │
         └── 🌐 api
             └── [...type].ts             # REST endpoints for CRUD ops.
-```
+``` -->
 
 ### 🛠 Tools
 
@@ -94,7 +102,7 @@ Efforts have been put on fast **onboarding** and **developer experience**.
 This project comes with extensive support for TypeScript, Astro, Tailwind, and VS Code.  
 It comes with sensible defaults, a bit of opinions, plus some tricks to make it plays nice together.
 
-- **TypeScript**: _strictest_ Astro's settings
+- **TypeScript**: _strictest_ Astro's settings. Full-stack, type-safe code base
 - **ESLint**: featuring `astro-eslint-parser` + `eslint-plugin-astro`
 - **Prettier**: featuring `prettier-plugin-astro` (bundled with `astro`)
 - **Editorconfig**: conforming with prettier
@@ -112,78 +120,100 @@ Feel free to hack those settings to cater for your own needs.
 <a href="https://user-images.githubusercontent.com/603498/224353577-51262536-742a-4204-b85f-3f83c209697d.png"><img class="w-full rounded-md overflow-hidden" alt="gh-workflow" src="https://user-images.githubusercontent.com/603498/224353577-51262536-742a-4204-b85f-3f83c209697d.png"></a>
 </div>
 
+<div class="hidden">
+
 ## Table of Contents
 
 - [Flowbite Astro Admin Dashboard ](#flowbite-astro-admin-dashboard-)
-  - [🌀 Built with Flowbite](#-built-with-flowbite)
-  - [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
-  - [📊 15 example pages](#-15-example-pages)
-  - [🧱 Advanced components](#-advanced-components)
-  - [📚 Flowbite documentation](#-flowbite-documentation)
-  - [⚙️ Workflow](#️-workflow)
-  - [🚀 Development](#-development)
-    - [Project Structure](#project-structure)
-    - [🛠 Tools](#-tools)
-  - [Table of Contents](#table-of-contents)
-    - [JavaScript Frameworks](#javascript-frameworks)
-    - [Back-end Frameworks](#back-end-frameworks)
-  - [Browser Support](#browser-support)
-  - [Resources](#resources)
-  - [Reporting Issues](#reporting-issues)
-  - [Technical Support or Questions](#technical-support-or-questions)
-  - [Licensing](#licensing)
-  - [Useful Links](#useful-links)
-  - [Authors](#authors)
+	- [🌀 Built with Flowbite](#-built-with-flowbite)
+	- [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
+	- [📊 15 example pages](#-15-example-pages)
+	- [🧱 Advanced components](#-advanced-components)
+	- [📚 Flowbite documentation](#-flowbite-documentation)
+	- [⚙️ Workflow](#️-workflow)
+	- [🚀 Development](#-development)
+		- [🛠 Tools](#-tools)
+	- [Table of Contents](#table-of-contents)
+	- [Demo pages](#demo-pages)
+	- [Quick start](#quick-start)
+		- [JavaScript Frameworks](#javascript-frameworks)
+		- [Back-end Frameworks](#back-end-frameworks)
+	- [Browser Support](#browser-support)
+	- [Resources](#resources)
+	- [Reporting Issues](#reporting-issues)
+	- [Technical Support or Questions](#technical-support-or-questions)
+	- [Licensing](#licensing)
+	- [Useful Links](#useful-links)
+	- [Authors](#authors)
 
-<!-- ## Demo pages
+## Demo pages
 
-| Dashboard                                                                                                                                              | Stacked Layout                                                                                                                                                             | Products (CRUD)                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Dashboard](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/homepage.jpg)](https://flowbite-admin-dashboard.vercel.app/) | [![Stacked Layout](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/stacked.jpg)](https://flowbite-admin-dashboard.vercel.app/layouts/stacked/) | [![Products (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/products-crud.jpg)](https://flowbite-admin-dashboard.vercel.app/crud/products/) |
+| Dashboard                                                                                                                                                             | Stacked Layout                                                                                                                                                                            | Products (CRUD)                                                                                                                                                                                |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Dashboard](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/homepage.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/) | [![Stacked Layout](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/stacked.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/layouts/stacked/) | [![Products (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/products-crud.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/crud/products/) |
 
-| Users (CRUD)                                                                                                                                                      | Settings                                                                                                                                                       | Pricing page                                                                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Users (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/users.jpg)](https://flowbite-admin-dashboard.vercel.app/crud/users/) | [![Settings](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/settings.jpg)](https://flowbite-admin-dashboard.vercel.app/settings/) | [![Pricing page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/pricing.jpg)](https://flowbite-admin-dashboard.vercel.app/pages/pricing/) |
+| Users (CRUD)                                                                                                                                                                     | Settings                                                                                                                                                                      | Pricing page                                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Users (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/users.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/crud/users/) | [![Settings](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/settings.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/settings/) | [![Pricing page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/pricing.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/pages/pricing/) |
 
-| Login page                                                                                                                                                                  | Register page                                                                                                                                                                     | Reset password                                                                                                                                                                                  |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Login page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/login.jpg)](https://flowbite-admin-dashboard.vercel.app/authentication/sign-in/) | [![Register page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/register.jpg)](https://flowbite-admin-dashboard.vercel.app/authentication/sign-up/) | [![Reset password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/reset-password.jpg)](https://flowbite-admin-dashboard.vercel.app/authentication/reset-password/) |
+| Login page                                                                                                                                                                                 | Register page                                                                                                                                                                                    | Reset password                                                                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Login page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/login.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/authentication/sign-in/) | [![Register page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/register.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/authentication/sign-up/) | [![Reset password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/reset-password.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/authentication/reset-password/) |
 
-| Forgot password                                                                                                                                                                                    | Profile lock                                                                                                                                                                              | Maintenance page                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Forgot password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/forgot-password.jpg)](https://flowbite-admin-dashboard.vercel.app/authentication/forgot-password/) | [![Profile lock](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/profile-lock.jpg)](https://flowbite-admin-dashboard.vercel.app/authentication/profile-lock/) | [![Maintenance page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/maintenance.jpg)](https://flowbite-admin-dashboard.vercel.app/pages/maintenance/) |
+| Forgot password                                                                                                                                                                                                   | Profile lock                                                                                                                                                                                             | Maintenance page                                                                                                                                                                                  |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Forgot password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/forgot-password.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/authentication/forgot-password/) | [![Profile lock](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/profile-lock.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/authentication/profile-lock/) | [![Maintenance page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/maintenance.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/pages/maintenance/) |
 
-| 404 not found                                                                                                                                                   | 500 server error                                                                                                                                                   | Playground                                                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![404 not found](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/404.jpg)](https://flowbite-admin-dashboard.vercel.app/pages/404/) | [![500 server error](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/500.jpg)](https://flowbite-admin-dashboard.vercel.app/pages/500/) | [![Playground](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/playground.jpg)](https://flowbite-admin-dashboard.vercel.app/playground/sidebar/) |
+| 404 not found                                                                                                                                                                  | 500 server error                                                                                                                                                                  | Playground                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![404 not found](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/404.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/pages/404/) | [![500 server error](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/500.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/pages/500/) | [![Playground](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/playground.jpg)](http://themesberg.github.io/flowbite-astro-admin-dashboard/playground/sidebar/) |
 
-- [Live Preview](https://flowbite-admin-dashboard.vercel.app/) -->
+- [Live Preview](http://themesberg.github.io/flowbite-astro-admin-dashboard/)
+</div>
 
-<!-- ## Quick start
+## Quick start
 
 1. Clone this repository or download the ZIP file
-2. Make sure that you have Node.js and NPM installed
+2. Make sure that you have **Node.js** and NPM, PNPM or Yarn installed
 3. Install the project dependencies from the `package.json` file:
 
-```
+```sh
+pnpm install
+# or
 npm install
+# or
+yarn
 ```
 
-4. Create a local server on `localhost:1313` by running the following command:
+_PNPM is the package manager of choice for illustration, but you can use what you want._
+
+1. Launch the Astro local development server on `localhost:2121` by running the following command:
 
 ```
-npm run start
+pnpm run dev
 ```
 
-You can also build the project and get the distribution files inside the `public/` folder by running:
+You can also build the project and get the distribution files inside the `dist/` folder by running:
 
 ```
-npm run build
+pnpm run build
 ```
 
-You can instantly upload your project to Vercel by selecting the default HUGO configuration, but depending on your own tech stack whether it's React.js, Vue, Nuxt.js, Next.js or a back-end framework you can also just copy the layouts from this project inside your own tech stack.
+Then, you can preview the generated build with a local web server:
 
-Here's a list of compatible technologies and guides for Flowbite and Tailwind CSS: -->
+```
+pnpm run preview
+```
+
+For deployment, see the GitHub workflow, where you can plug your target (pre-configured for GitHub pages).
+See [docs.astro.build/en/guides/deploy](https://docs.astro.build/en/guides/deploy)
+
+Website is configured for static deployment, but you can flip it to **Server-Side rendering** by simply
+uncommenting `output: "server"` in the `./astro.config.mjs`.
+
+---
+
+Here's a list of compatible technologies and guides for Flowbite and Tailwind CSS:
 
 ### JavaScript Frameworks
 
@@ -215,7 +245,7 @@ Flowbite has a great integration with most of the back-end frameworks because it
 
 At present, we officially aim to support the last two versions of the following browsers:
 
-<div class="flex justify-between w-full">
+<div align="center" class="flex justify-between w-full">
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 </div>
 
