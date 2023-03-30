@@ -11,8 +11,10 @@ const users = JSON.stringify(getUsers(), null, 2);
 ---
 
 <LayoutSidebar class="bg-slate-800 text-slate-100">
-	<div class="p-16">
-		<h1 class="text-3xl ml-8 lg:text-4xl xl:text-6xl font-bold">
+	<div class="playground p-16">
+		<h1
+			class="text-3xl ml-8 lg:text-4xl xl:text-6xl font-bold dark:text-slate-100"
+		>
 			🕹&nbsp;Playground — API data
 		</h1>
 
@@ -25,14 +27,24 @@ const users = JSON.stringify(getUsers(), null, 2);
 		</div>
 
 		<div class="mb-16">
-			<h1 class="text-6xl font-bold mb-8">Products</h1>
+			<a href="/api/products" target="_blank">
+				<h1 class="text-6xl font-bold mb-8 dark:text-slate-100">Products</h1>
+			</a>
 
 			<Code code={products} lang="json" />
 		</div>
 		<div class="mb-16">
-			<h1 class="text-6xl font-bold mb-8">Users</h1>
+			<a href="/api/users" target="_blank">
+				<h1 class="text-6xl font-bold mb-8 dark:text-slate-100">Users</h1>
+			</a>
 
 			<Code code={users} lang="json" />
 		</div>
 	</div>
 </LayoutSidebar>
+
+<style is:global>
+	.playground .astro-code {
+		@apply rounded-3xl p-8;
+	}
+</style>
