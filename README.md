@@ -1,7 +1,7 @@
 # [Flowbite Astro Admin Dashboard](https://themesberg.github.io/flowbite-astro-admin-dashboard/) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fthemesberg%2Fflowbite-astro-admin-dashboard&text=Check%20out%20this%20open-source%20admin%20dashboard%20built%20with%20Flowbite%2C%20Astro%20and%20Tailwind%20CSS)
 
 <!-- NOTE: This is a Tailwind in MD experiment, to make it nice when rendered with Astro -->
-<div class="flex flex-wrap justify-evenly w-full">
+<div align="center" class="flex flex-wrap justify-evenly w-full">
 	<a href="https://www.npmjs.com/package/flowbite-admin-dashboard"><img src="https://img.shields.io/badge/version-v0.0.3-blue" alt="version"></a>
 	<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"></a>
 	<a href="https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/github/issues/themesberg/flowbite-astro-admin-dashboard.svg" alt="GitHub issues open"></a>
@@ -14,9 +14,43 @@ This project is a free and open-source UI admin dashboard template built with th
 
 This admin dashboard can quickly help you get started building an application for your project using the newest UI/UX development technologies in the open-source area including Tailwind CSS and Flowbite.
 
-<div class="flex flex-wrap justify-evenly w-full my-16">
+---
+
+<div align="center" class="flex flex-wrap justify-evenly w-full my-16">
 	<a href="https://stackblitz.com/github/themesberg/flowbite-astro-admin-dashboard"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt="Open in StackBlitz"></a>
 	<a href="https://codesandbox.io/p/github/themesberg/flowbite-astro-admin-dashboard/main"><img src="https://assets.codesandbox.io/github/button-edit-lime.svg" alt="Open with CodeSandbox"></a>
+</div>
+
+<div class="hidden">
+
+---
+
+## Table of Contents
+
+- [Flowbite Astro Admin Dashboard ](#flowbite-astro-admin-dashboard-)
+	- [Table of Contents](#table-of-contents)
+	- [🌀 Built with Flowbite](#-built-with-flowbite)
+	- [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
+	- [📊 15 example pages](#-15-example-pages)
+	- [🧱 Advanced components](#-advanced-components)
+	- [📚 Flowbite documentation](#-flowbite-documentation)
+	- [🚀 Development](#-development)
+		- [⚙️ Workflow](#️-workflow)
+		- [Quick start](#quick-start)
+		- [🛠 Tools](#-tools)
+	- [Demo pages](#demo-pages)
+		- [JavaScript Frameworks](#javascript-frameworks)
+		- [Back-end Frameworks](#back-end-frameworks)
+	- [Browser Support](#browser-support)
+	- [Resources](#resources)
+	- [Reporting Issues](#reporting-issues)
+	- [Technical Support or Questions](#technical-support-or-questions)
+	- [Licensing](#licensing)
+	- [Useful Links](#useful-links)
+	- [Authors](#authors)
+
+---
+
 </div>
 
 ## 🌀 Built with Flowbite
@@ -39,7 +73,9 @@ This admin dashboard contains many advanced components both from Flowbite but al
 
 If you want to use this project we recommend to also [study the component library](https://flowbite.com/docs/getting-started/introduction/) that we used to build this dashboard because you can use even more components from that library to enhance the examples that we've coded here already.
 
-## ⚙️ Workflow
+## 🚀 Development
+
+### ⚙️ Workflow
 
 This product is built using the following widely used technologies:
 
@@ -47,7 +83,47 @@ This product is built using the following widely used technologies:
 - Flowbite: [flowbite.com](http://flowbite.com/)
 - Astro: [astro.build](https://astro.build/)
 
-## 🚀 Development
+### Quick start
+
+1. Clone this repository or download the ZIP file
+2. Make sure that you have **Node.js** and NPM, PNPM or Yarn installed
+3. Install the project dependencies from the `package.json` file:
+
+```sh
+pnpm install
+# or
+npm install
+# or
+yarn
+```
+
+_PNPM is the package manager of choice for illustration, but you can use what you want._
+
+1. Launch the Astro local development server on `localhost:2121` by running the following command:
+
+```
+pnpm run dev
+```
+
+You can also build the project and get the distribution files inside the `dist/` folder by running:
+
+```
+pnpm run build
+```
+
+Then, you can preview the generated build with a local web server:
+
+```
+pnpm run preview
+```
+
+For deployment, see the GitHub workflow, where you can plug your target (pre-configured for GitHub pages).
+See [docs.astro.build/en/guides/deploy](https://docs.astro.build/en/guides/deploy)
+
+Website is configured for static deployment, but you can flip it to **Server-Side rendering** by simply
+uncommenting `output: "server"` in the `./astro.config.mjs`.
+
+---
 
 <!-- ### Project Structure
 
@@ -100,7 +176,7 @@ After cloning this repository, you'll find the following (simplified) structure:
 Efforts have been put on fast **onboarding** and **developer experience**.
 
 This project comes with extensive support for TypeScript, Astro, Tailwind, and VS Code.  
-It comes with sensible defaults, a bit of opinions, plus some tricks to make it plays nice together.
+It is configured with sensible defaults, a bit of opinions, plus some tricks to make it plays nice together.
 
 - **TypeScript**: _strictest_ Astro's settings. Full-stack, type-safe code base
 - **ESLint**: featuring `astro-eslint-parser` + `eslint-plugin-astro`
@@ -121,30 +197,6 @@ Feel free to hack those settings to cater for your own needs.
 </div>
 
 <div class="hidden">
-
-## Table of Contents
-
-- [Flowbite Astro Admin Dashboard ](#flowbite-astro-admin-dashboard-)
-	- [🌀 Built with Flowbite](#-built-with-flowbite)
-	- [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
-	- [📊 15 example pages](#-15-example-pages)
-	- [🧱 Advanced components](#-advanced-components)
-	- [📚 Flowbite documentation](#-flowbite-documentation)
-	- [⚙️ Workflow](#️-workflow)
-	- [🚀 Development](#-development)
-		- [🛠 Tools](#-tools)
-	- [Table of Contents](#table-of-contents)
-	- [Demo pages](#demo-pages)
-	- [Quick start](#quick-start)
-		- [JavaScript Frameworks](#javascript-frameworks)
-		- [Back-end Frameworks](#back-end-frameworks)
-	- [Browser Support](#browser-support)
-	- [Resources](#resources)
-	- [Reporting Issues](#reporting-issues)
-	- [Technical Support or Questions](#technical-support-or-questions)
-	- [Licensing](#licensing)
-	- [Useful Links](#useful-links)
-	- [Authors](#authors)
 
 ## Demo pages
 
@@ -171,51 +223,9 @@ Feel free to hack those settings to cater for your own needs.
 - [Live Preview](http://themesberg.github.io/flowbite-astro-admin-dashboard/)
 </div>
 
-## Quick start
-
-1. Clone this repository or download the ZIP file
-2. Make sure that you have **Node.js** and NPM, PNPM or Yarn installed
-3. Install the project dependencies from the `package.json` file:
-
-```sh
-pnpm install
-# or
-npm install
-# or
-yarn
-```
-
-_PNPM is the package manager of choice for illustration, but you can use what you want._
-
-1. Launch the Astro local development server on `localhost:2121` by running the following command:
-
-```
-pnpm run dev
-```
-
-You can also build the project and get the distribution files inside the `dist/` folder by running:
-
-```
-pnpm run build
-```
-
-Then, you can preview the generated build with a local web server:
-
-```
-pnpm run preview
-```
-
-For deployment, see the GitHub workflow, where you can plug your target (pre-configured for GitHub pages).
-See [docs.astro.build/en/guides/deploy](https://docs.astro.build/en/guides/deploy)
-
-Website is configured for static deployment, but you can flip it to **Server-Side rendering** by simply
-uncommenting `output: "server"` in the `./astro.config.mjs`.
-
----
+### JavaScript Frameworks
 
 Here's a list of compatible technologies and guides for Flowbite and Tailwind CSS:
-
-### JavaScript Frameworks
 
 The awesome open-source community also built and currently maintains the following standalone libraries for React, Vue, Svelte, and Angular:
 
