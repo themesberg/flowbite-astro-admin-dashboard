@@ -15,6 +15,8 @@ export default defineConfig({
 	/* Like Vercel, Netlify,… Mimicking for dev. server */
 	// trailingSlash: 'always',
 
+	// output: 'server',
+
 	server: {
 		/* Dev. server only */
 		port: DEV_PORT,

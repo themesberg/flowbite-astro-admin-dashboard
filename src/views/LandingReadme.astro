@@ -3,7 +3,7 @@ import Code from 'astro/components/Code.astro';
 
 import Confettis from '../ui/ConfettiLauncher.astro';
 
-import AstroLogo from '../assets/astro-icon-light.svg?raw';
+import AstroLogo from '../assets/astro-icon.svg?raw';
 import FlowbiteLogo from '../assets/flowbite-logo.svg?raw';
 
 import * as readMe from '../../README.md';
@@ -11,27 +11,33 @@ import { SITE_TITLE } from '../app/constants.js';
 ---
 
 <div
-	class="bg-gradient-to-r from-slate-900 to-slate-800 text-slate-100 mb-20 p-4 lg:p-16"
+	class="bg-gradient-to-r from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-100 mb-20 p-4 lg:p-16 shadow-xl shadow-slate-200"
 >
 	<header
 		class="p-8 flex justify-center items-center flex-wrap flex-col w-full mt-16"
 	>
 		<div class="flex justify-center w-full">
-			<div set:html={AstroLogo} class="svg-inline w-16 h-16" />
+			<div
+				set:html={AstroLogo}
+				class="svg-inline w-16 h-16 text-violet-700 dark:text-violet-300"
+			/>
 		</div>
 
-		<div class="format format-invert lg:format-lg mt-32">
-			<p class="text-4xl lg:text-8xl text-slate-200 leading-tight">
+		<div class="format dark:format-invert lg:format-lg mt-32">
+			<p
+				class="text-4xl lg:text-8xl dark:text-slate-200 text-slate-600 leading-tight"
+			>
 				Hello <a
 					rel="noopener nofollow"
 					href="https://astro.build"
-					class="font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-300 to-violet-700 no-underline"
+					class="font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-violet-800 dark:from-pink-300 dark:to-violet-700 no-underline"
 					>Astro</a
 				>…
 				<br />meet <a
 					rel="noopener nofollow"
 					href="https://flowbite.com"
-					class="font-bold text-blue-500 no-underline">Flowbite</a
+					class="font-bold text-blue-600 dark:text-blue-500 no-underline"
+					>Flowbite</a
 				>!
 			</p>
 
@@ -39,7 +45,7 @@ import { SITE_TITLE } from '../app/constants.js';
 				<Confettis>
 					<button
 						type="button"
-						class="text-blue-200 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-100 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
+						class="text-blue-800 hover:text-white border border-blue-700 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-100 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800"
 						>Click me!</button
 					>
 				</Confettis>
@@ -52,7 +58,7 @@ import { SITE_TITLE } from '../app/constants.js';
 	</header>
 
 	<section class="flex justify-center w-full pb-24">
-		<div class="w-full format format-invert">
+		<div class="w-full format dark:format-invert">
 			<Code
 				lang={'powershell' /* Looks cool */}
 				code={`git clone \\
@@ -61,8 +67,8 @@ https://github.com/themesberg/flowbite-astro-admin-dashboard.git`}
 		</div>
 	</section>
 
-	<article class="flex justify-center w-full">
-		<div class="readme format format-invert lg:format-lg">
+	<article class="flex justify-center w-full pb-32">
+		<div class="readme format dark:format-invert lg:format-lg">
 			<h1 class="text-center">
 				<!-- {readMe.getHeadings()[0].text} -->
 				{SITE_TITLE}
