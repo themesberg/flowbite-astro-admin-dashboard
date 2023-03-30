@@ -1,7 +1,7 @@
 ---
 /* http://localhost:2121/playground/kitchen-sink/ */
 
-import Layout from '../../app/LayoutDefault.astro';
+import LayoutSidebar from '../../app/LayoutSidebar.astro';
 import CrudProducts from '../../views/CrudProducts.astro';
 import FormSignIn from '../../views/FormSignIn.astro';
 import FormSignUp from '../../views/FormSignUp.astro';
@@ -17,7 +17,7 @@ import PricingPlan from '../../views/PricingPlan.astro';
 import { actions } from './_actions.js';
 ---
 
-<Layout class="bg-slate-800 text-slate-100 mb-20 py-16 px-8">
+<LayoutSidebar class="bg-slate-800 text-slate-100 mb-20 py-16 px-8">
 	<h1 class="text-3xl ml-8 lg:text-4xl xl:text-7xl font-bold">
 		🕹&nbsp;Playground
 	</h1>
@@ -105,7 +105,7 @@ import { actions } from './_actions.js';
 			</div>
 		</div>
 	</section>
-</Layout>
+</LayoutSidebar>
 
 <script>
 	import type { CrudEntities } from '../../views/CrudEntities.client.js';

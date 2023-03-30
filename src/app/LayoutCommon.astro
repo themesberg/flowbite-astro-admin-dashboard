@@ -1,10 +1,6 @@
 ---
 import pkg from '../../package.json' assert { type: 'json' };
-import FooterDashboard from './FooterDashboard.astro';
-// import FooterMain from './FooterMain.astro';
-// import NavBarMain from './NavBarMain.astro';
-import NavBarDashboard from './NavBarDashboard.astro';
-import SidebarMain from './SideBar.astro';
+
 import { SITE_TITLE } from './constants.js';
 
 const { class: clazz } = Astro.props;
@@ -51,23 +47,7 @@ const { class: clazz } = Astro.props;
 			'dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700',
 		]}
 	>
-		<!-- <NavBarMain /> -->
-		<NavBarDashboard />
-		<SidebarMain />
-
-		<div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
-			<div
-				id="main-content"
-				class="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900"
-			>
-				<div class="min-h-screen">
-					<slot />
-					<FooterDashboard />
-				</div>
-			</div>
-
-			<!-- <FooterMain /> -->
-		</div>
+		<slot />
 	</body>
 </html>
 

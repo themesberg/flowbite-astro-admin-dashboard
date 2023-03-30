@@ -7,7 +7,7 @@ import { url } from '../lib/data.js';
 <!-- TODO: Dynamic dropdowns -->
 <aside
 	id="sidebar"
-	class="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 hidden w-64 h-full pt-16 font-normal duration-75 lg:flex transition-width"
+	class="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 w-64 h-full pt-16 font-normal duration-75 lg:flex transition-width"
 	aria-label="Sidebar"
 >
 	<div
@@ -91,7 +91,7 @@ import { url } from '../lib/data.js';
 							<span class="ml-3" sidebar-toggle-item>Dashboard</span>
 						</a>
 					</li>
-					<li class="hidden">
+					<li>
 						<button
 							type="button"
 							class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
@@ -189,7 +189,7 @@ import { url } from '../lib/data.js';
 									>Products</a
 								>
 							</li>
-							<li class="hidden">
+							<li>
 								<!--  {{ if eq $page_slug "users" }} -->
 								<!-- bg-gray-100 dark:bg-gray-700 -->
 								<a
@@ -395,28 +395,28 @@ import { url } from '../lib/data.js';
 						</button>
 						<!--  {{ if not (eq .Params.group "playground") }}hidden {{ end }} -->
 						<ul id="dropdown-playground" class="space-y-2 py-2">
-							<li class="hidden">
+							<li>
 								<!-- {{ if eq $page_slug "stacked" }} -->
 								<!--  bg-gray-100 dark:bg-gray-700 -->
-								<!-- <a
+								<a
 									href={url('playground/stacked')}
 									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Stacked</a
-								> -->
-								<a
+								>
+								<!-- <a
 									href={url('playground/kitchen-sink')}
 									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Kitchen Sink</a
-								>
+								> -->
 							</li>
 							<li>
 								<!-- {{ if eq $page_slug "sidebar" }} -->
 								<!--  bg-gray-100 dark:bg-gray-700 -->
-								<!-- <a
+								<a
 									href={url('playground/sidebar')}
 									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Sidebar</a
-								> -->
+								>
 								<a
 									href={url('playground/data')}
 									class="text-base text-gray-900 rounded-lg flex items-center p-2 group hover:bg-gray-100 transition duration-75 pl-11 dark:text-gray-200 dark:hover:bg-gray-700"

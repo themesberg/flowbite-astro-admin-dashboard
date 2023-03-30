@@ -2,7 +2,7 @@
 /* http://localhost:2121/playground/data/ */
 
 import Code from 'astro/components/Code.astro';
-import Layout from '../../app/LayoutDefault.astro';
+import LayoutSidebar from '../../app/LayoutSidebar.astro';
 import { getUsers, getProducts } from '../../services/index.js';
 
 const products = JSON.stringify(getProducts(), null, 2);
@@ -10,9 +10,9 @@ const products = JSON.stringify(getProducts(), null, 2);
 const users = JSON.stringify(getUsers(), null, 2);
 ---
 
-<Layout class="bg-slate-800 text-slate-100">
+<LayoutSidebar class="bg-slate-800 text-slate-100">
 	<div class="p-16">
-		<h1 class="text-3xl ml-8 lg:text-4xl xl:text-7xl font-bold">
+		<h1 class="text-3xl ml-8 lg:text-4xl xl:text-6xl font-bold">
 			🕹&nbsp;Playground — API data
 		</h1>
 
@@ -35,4 +35,4 @@ const users = JSON.stringify(getUsers(), null, 2);
 			<Code code={users} lang="json" />
 		</div>
 	</div>
-</Layout>
+</LayoutSidebar>
