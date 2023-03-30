@@ -9,6 +9,8 @@ export class CrudEntities extends HTMLElement {
 
 	#rows = this.#body.querySelectorAll('tr')!;
 
+	#refreshButton = this.querySelector('[data-refresh]');
+
 	type: Endpoint | undefined;
 
 	constructor() {
@@ -20,6 +22,10 @@ export class CrudEntities extends HTMLElement {
 		)
 			this.type = type as Endpoint;
 		else throw Error('Wrong CRUD type!');
+
+		this.#refreshButton?.addEventListener('click', () => {
+			this.update().catch(() => undefined);
+		});
 	}
 
 	/**

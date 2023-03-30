@@ -1,4 +1,6 @@
 ---
+import ToggleSwitch from '../ui/ToggleSwitch.astro';
+
 /* eslint max-lines: 'off' */
 ---
 
@@ -18,19 +20,9 @@
 		<span class="text-base font-medium text-gray-900 dark:text-white">
 			Monthly
 		</span>
-		<!-- Switch Container -->
-		<div>
-			<label
-				for="toggle-example"
-				class="relative flex items-center mx-4 cursor-pointer"
-			>
-				<input type="checkbox" id="toggle-example" class="sr-only" />
-				<div
-					class="h-6 bg-gray-200 border border-gray-200 rounded-full toggle-bg w-11 dark:bg-gray-700 dark:border-gray-600"
-				>
-				</div>
-			</label>
-		</div>
+
+		<ToggleSwitch id="toggle-example" class="mx-4" />
+
 		<span class="text-base font-medium text-gray-500 dark:text-gray-400">
 			Yearly
 		</span>

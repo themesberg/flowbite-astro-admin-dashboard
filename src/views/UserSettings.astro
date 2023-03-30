@@ -3,6 +3,7 @@
 
 import { asset, url } from '../lib/data.js';
 import PictureUploader from '../ui/PictureUploader.astro';
+import ToggleSwitch from '../ui/ToggleSwitch.astro';
 ---
 
 <div
@@ -922,15 +923,7 @@ import PictureUploader from '../ui/PictureUploader.astro';
 							Get Themesberg news, announcements, and product updates
 						</div>
 					</div>
-					<label
-						for="company-news"
-						class="relative flex items-center cursor-pointer"
-					>
-						<input type="checkbox" id="company-news" class="sr-only" />
-						<span
-							class="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"
-						></span>
-					</label>
+					<ToggleSwitch id="company-news" />
 				</div>
 				<!-- Item 2 -->
 				<div class="flex items-center justify-between py-4">
@@ -942,20 +935,8 @@ import PictureUploader from '../ui/PictureUploader.astro';
 							Get important notifications about you or activity you've missed
 						</div>
 					</div>
-					<label
-						for="account-activity"
-						class="relative flex items-center cursor-pointer"
-					>
-						<input
-							type="checkbox"
-							id="account-activity"
-							class="sr-only"
-							checked
-						/>
-						<span
-							class="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"
-						></span>
-					</label>
+
+					<ToggleSwitch id="account-activity" checked />
 				</div>
 				<!-- Item 3 -->
 				<div class="flex items-center justify-between py-4">
@@ -967,15 +948,7 @@ import PictureUploader from '../ui/PictureUploader.astro';
 							Get an email when a Dribbble Meetup is posted close to my location
 						</div>
 					</div>
-					<label
-						for="meetups"
-						class="relative flex items-center cursor-pointer"
-					>
-						<input type="checkbox" id="meetups" class="sr-only" checked />
-						<span
-							class="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"
-						></span>
-					</label>
+					<ToggleSwitch id="meetups" />
 				</div>
 				<!-- Item 4 -->
 				<div class="flex items-center justify-between pt-4">
@@ -984,18 +957,10 @@ import PictureUploader from '../ui/PictureUploader.astro';
 							New Messages
 						</div>
 						<div class="text-base font-normal text-gray-500 dark:text-gray-400">
-							Get Themsberg news, announcements, and product updates
+							Get Themesberg news, announcements, and product updates
 						</div>
 					</div>
-					<label
-						for="new-messages"
-						class="relative flex items-center cursor-pointer"
-					>
-						<input type="checkbox" id="new-messages" class="sr-only" />
-						<span
-							class="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"
-						></span>
-					</label>
+					<ToggleSwitch id="new-messages" />
 				</div>
 			</div>
 			<div class="mt-6">
@@ -1025,15 +990,7 @@ import PictureUploader from '../ui/PictureUploader.astro';
 							Send an email reminding me to rate an item a week after purchase
 						</div>
 					</div>
-					<label
-						for="rating-reminders"
-						class="relative flex items-center cursor-pointer"
-					>
-						<input type="checkbox" id="rating-reminders" class="sr-only" />
-						<span
-							class="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"
-						></span>
-					</label>
+					<ToggleSwitch id="rating-reminders" />
 				</div>
 				<!-- Item 2 -->
 				<div class="flex items-center justify-between py-4">
@@ -1045,15 +1002,7 @@ import PictureUploader from '../ui/PictureUploader.astro';
 							Send user and product notifications for you
 						</div>
 					</div>
-					<label
-						for="item-update"
-						class="relative flex items-center cursor-pointer"
-					>
-						<input type="checkbox" id="item-update" class="sr-only" checked />
-						<span
-							class="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"
-						></span>
-					</label>
+					<ToggleSwitch id="item-update" />
 				</div>
 				<!-- Item 3 -->
 				<div class="flex items-center justify-between py-4">
@@ -1065,15 +1014,7 @@ import PictureUploader from '../ui/PictureUploader.astro';
 							Send me an email when someone comments on one of my items
 						</div>
 					</div>
-					<label
-						for="item-comment"
-						class="relative flex items-center cursor-pointer"
-					>
-						<input type="checkbox" id="item-comment" class="sr-only" checked />
-						<span
-							class="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"
-						></span>
-					</label>
+					<ToggleSwitch id="item-comment" />
 				</div>
 				<!-- Item 4 -->
 				<div class="flex items-center justify-between pt-4">
@@ -1085,15 +1026,7 @@ import PictureUploader from '../ui/PictureUploader.astro';
 							Send me an email when someone leaves a review with their rating
 						</div>
 					</div>
-					<label
-						for="buyer-rev"
-						class="relative flex items-center cursor-pointer"
-					>
-						<input type="checkbox" id="buyer-rev" class="sr-only" />
-						<span
-							class="h-6 bg-gray-200 border border-gray-200 rounded-full w-11 toggle-bg dark:bg-gray-700 dark:border-gray-600"
-						></span>
-					</label>
+					<ToggleSwitch id="buyer-rev" />
 				</div>
 			</div>
 			<div class="mt-6">
