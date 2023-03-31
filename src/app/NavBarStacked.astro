@@ -1,5 +1,5 @@
 ---
-import { asset } from '../lib/data.js';
+import { asset, url } from '../lib/data.js';
 ---
 
 <nav
@@ -8,7 +8,7 @@ import { asset } from '../lib/data.js';
 	<div class="container py-3 mx-auto">
 		<div class="flex items-center justify-between">
 			<div class="flex items-center justify-start">
-				<a href="/" class="flex mr-4">
+				<a href={url()} class="flex mr-4">
 					<img
 						src={asset('images/logo.svg')}
 						class="h-8 mr-3"
@@ -23,7 +23,7 @@ import { asset } from '../lib/data.js';
 					<ul class="flex space-x-8">
 						<li>
 							<a
-								href="/"
+								href={url()}
 								class="text-sm font-medium text-gray-700 hover:text-primary-700 dark:text-gray-400 dark:hover:text-primary-500"
 								aria-current="page">Home</a
 							>

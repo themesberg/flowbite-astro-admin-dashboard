@@ -214,7 +214,7 @@ It is configured with sensible defaults, a bit of opinions, plus some tricks to 
 - **VS Code**: extensions recommendations, tooling settings
 - **Tailwind**: Astro integration (using Vite and PostCSS)
 - **Flowbite**: dependencies (core, typography), settings
-- **GitHub**: a [pre-configured workflow](./.github/workflows/demo.yaml) for deployment (using PNPM cache)
+- **GitHub**: a [pre-configured workflow](https://github.com/themesberg/flowbite-astro-admin-dashboard/tree/main/.github/workflows) for deployment (using PNPM cache)
 - **Sandboxes**: project is tested against and fully compatible with web containers
 
 Feel free to hack those settings to cater for your own needs.
