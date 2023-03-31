@@ -13,6 +13,8 @@ function parseTypeParam(endpoint: string | undefined) {
 	return endpoint as keyof typeof endpointsToOperations;
 }
 
+/* Controllers */
+
 export const get: APIRoute = ({ params /* , request */ }) => {
 	console.log('Hit!', params.entity);
 
@@ -29,6 +31,8 @@ export const get: APIRoute = ({ params /* , request */ }) => {
 		},
 	});
 };
+
+/* ... */
 
 /* Astro's static build helper, can be removed for SSR mode */
 export function getStaticPaths() {
