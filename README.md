@@ -25,6 +25,10 @@ This admin dashboard can quickly help you get started building an application fo
 
 ---
 
+## Table of Contents
+
+<details><summary>Click to expand</summary>
+
 - [🕹 Demo pages](#-demo-pages)
 - [🌀 Built with Flowbite](#-built-with-flowbite)
 - [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
@@ -32,18 +36,20 @@ This admin dashboard can quickly help you get started building an application fo
 - [🧱 Advanced components](#-advanced-components)
 - [📚 Flowbite documentation](#-flowbite-documentation)
 - [👨‍🚀 Development](#-development)
-	- [⚙️ Workflow](#️-workflow)
-	- [🚀 Quick start](#-quick-start)
-	- [🛠 Tools](#-tools)
+  - [⚙️ Workflow](#️-workflow)
+  - [🚀 Quick start](#-quick-start)
+  - [🛠 Tools](#-tools)
 - [Browser Support](#browser-support)
 - [Resources](#resources)
-	- [JavaScript Frameworks](#javascript-frameworks)
-	- [Back-end Frameworks](#back-end-frameworks)
+  - [JavaScript Frameworks](#javascript-frameworks)
+  - [Back-end Frameworks](#back-end-frameworks)
 - [Reporting Issues](#reporting-issues)
 - [Technical Support or Questions](#technical-support-or-questions)
 - [Licensing](#licensing)
 - [Useful Links](#useful-links)
 - [Authors](#authors)
+
+</details>
 
 ---
 
