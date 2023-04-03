@@ -2,7 +2,7 @@
 
 <!-- NOTE: This is a Tailwind in MD experiment, to make it nice when rendered with Astro -->
 <div align="center" class="flex flex-wrap justify-evenly w-full">
-	<a href="https://www.npmjs.com/package/flowbite-admin-dashboard"><img src="https://img.shields.io/badge/version-v0.0.3-blue" alt="version"></a>
+	<a href="https://github.com/themesberg/flowbite-astro-admin-dashboard"><img src="https://img.shields.io/badge/version-v1.0.2-blue" alt="version"></a>
 	<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"></a>
 	<a href="https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/github/issues/themesberg/flowbite-astro-admin-dashboard.svg" alt="GitHub issues open"></a>
 	<a href="https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/themesberg/flowbite-astro-admin-dashboard.svg" alt="GitHub issues closed"></a>
@@ -29,6 +29,7 @@ This admin dashboard can quickly help you get started building an application fo
 
 <details><summary>Click to expand</summary>
 
+- [Table of Contents](#table-of-contents)
 - [🕹 Demo pages](#-demo-pages)
 - [🌀 Built with Flowbite](#-built-with-flowbite)
 - [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
@@ -38,6 +39,7 @@ This admin dashboard can quickly help you get started building an application fo
 - [👨‍🚀 Development](#-development)
   - [⚙️ Workflow](#️-workflow)
   - [🚀 Quick start](#-quick-start)
+  - [Project Structure](#project-structure)
   - [🛠 Tools](#-tools)
 - [Browser Support](#browser-support)
 - [Resources](#resources)
@@ -154,29 +156,16 @@ uncommenting `output: "server"` in the `./astro.config.mjs`.
 
 ---
 
-<!-- ### Project Structure
+### Project Structure
 
 After cloning this repository, you'll find the following (simplified) structure:
 
 ```sh
-
-│   ├── app
-│   ├── assets
-│   ├── lib
-│   ├── pages
-│   ├── services
-│   ├── types
-│   ├── ui
-│   └── views
-
-#    ├── ✨ consts.ts                     # Application-wide constants
-    ├── 📜 Layout.astro                  # Main (default) application layout
-
+🛬
 ├── 💧 data
 │   └── **/*.json                        # Satic data sources for REST etc.
 │
 └── src
-    │
     │
     ├── 🧱 app
     │   └── **/*.astro                   # Application-wide components
@@ -184,21 +173,28 @@ After cloning this repository, you'll find the following (simplified) structure:
     ├── 🌠 assets
     │   └── **/*.{svg,…}                 # Transformable assets
     │
-    ├── 🧱 elements
-    │   └── **/*.astro                   # Simple, atomic components
+    ├── 🧱 components
+    │   └── **/*.astro                   # Simple, atomic UI elements
+    │
+    ├── 📚 lib
+    │   └── **/*.ts                      # Utilities (Databases, APIs…)
     │
     ├── 🧱 modules
-    │   └── **/*.astro                   # Complex sets of components
+    │   └── **/*.astro                   # Complex views made of elements
     │
-    ├── 🚀 operations
-    │   └── *.ts                         # Server-side CRUD actions
+    ├── 📑 pages
+    │   ├── **/*.astro                   # File-based client routes
+    │   │
+    │   └── 🌐 api
+    │        └── [...entities].ts        # Catch-all endpoint for CRUD ops.
     │
-    └── 📑 pages
-        ├── **/*.astro                   # File-based client routes
-        │
-        └── 🌐 api
-            └── [...type].ts             # REST endpoints for CRUD ops.
-``` -->
+    ├── 🚀 services
+    │   └── *.ts                         # Server-side CRUD operations
+    │
+    └── 📐 types
+        └── *.ts                         # Data entities typings
+
+```
 
 ### 🛠 Tools
 

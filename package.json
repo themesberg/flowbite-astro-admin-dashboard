@@ -1,6 +1,6 @@
 {
 	"name": "flowbite-astro-admin-dashboard",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"private": "true",
 	"description": "A free and open-source admin dashboard template built with Tailwind CSS, Flowbite and Astro",
 	"keywords": [
