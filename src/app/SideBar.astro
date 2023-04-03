@@ -7,7 +7,7 @@ import { url } from '../lib/data.js';
 <!-- TODO: Dynamic dropdowns -->
 <aside
 	id="sidebar"
-	class="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 w-64 h-full pt-16 font-normal duration-75 lg:flex transition-width"
+	class="fixed top-0 left-0 z-20 flex flex-col flex-shrink-0 hidden w-64 h-full pt-16 font-normal duration-75 lg:flex transition-width"
 	aria-label="Sidebar"
 >
 	<div
@@ -125,7 +125,7 @@ import { url } from '../lib/data.js';
 									clip-rule="evenodd"></path></svg
 							>
 						</button>
-						<ul id="dropdown-layouts" class="_hidden py-2 space-y-2">
+						<ul id="dropdown-layouts" class="hidden py-2 space-y-2">
 							<li>
 								<a
 									href={url('layouts/stacked')}
@@ -178,7 +178,7 @@ import { url } from '../lib/data.js';
 									clip-rule="evenodd"></path></svg
 							>
 						</button>
-						<ul id="dropdown-crud" class="space-y-2 py-2">
+						<ul id="dropdown-crud" class="hidden space-y-2 py-2">
 							<!-- if not (eq .Params.group crud) }}hidden {{ end }} -->
 							<li>
 								<!-- {{ if eq $page_slug "products" }} -->
@@ -255,7 +255,7 @@ import { url } from '../lib/data.js';
 									clip-rule="evenodd"></path></svg
 							>
 						</button>
-						<ul id="dropdown-pages" class="_hidden py-2 space-y-2">
+						<ul id="dropdown-pages" class="hidden py-2 space-y-2">
 							<li>
 								<a
 									href={url('pages/pricing')}
@@ -319,7 +319,7 @@ import { url } from '../lib/data.js';
 									clip-rule="evenodd"></path></svg
 							>
 						</button>
-						<ul id="dropdown-auth" class="_hidden py-2 space-y-2">
+						<ul id="dropdown-auth" class="hidden py-2 space-y-2">
 							<li>
 								<a
 									href={url('authentication/sign-in')}
@@ -394,7 +394,7 @@ import { url } from '../lib/data.js';
 							>
 						</button>
 						<!--  {{ if not (eq .Params.group "playground") }}hidden {{ end }} -->
-						<ul id="dropdown-playground" class="space-y-2 py-2">
+						<ul id="dropdown-playground" class="hidden space-y-2 py-2">
 							<li>
 								<!-- {{ if eq $page_slug "stacked" }} -->
 								<!--  bg-gray-100 dark:bg-gray-700 -->
