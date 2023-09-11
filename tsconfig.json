@@ -1,6 +1,36 @@
 {
-  "extends": "astro/tsconfigs/strictest",
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "strictNullChecks": true
-  }
+    "strictNullChecks": true,
+		"jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "baseUrl": ".",
+		"lib": ["dom", "es2015"],
+      "outDir": "./lib/cjs/",
+      "sourceMap": true,
+      "declaration": true,
+      "noImplicitAny": true,
+      "module": "commonjs",
+      "target": "es5",
+      "allowJs": true,
+      "moduleResolution": "node",
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ],
+  },
+	"include": [
+		"**/*.vue",    // with Vue
+		"**/*.svelte", // with Svelte
+		"**/*.astro",  // with Astro
+		"**/*.ts",
+		"**/*.tsx",
+		"**/*.js",
+	],
+	"exclude": ["node_modules", "dist", "lib"]
 }

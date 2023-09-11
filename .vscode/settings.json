@@ -25,8 +25,13 @@
 		"javascript",
 		"javascriptreact",
 		"typescript",
-		"typescriptreact"
+		"typescriptreact",
 	],
+		"editor.codeActionsOnSave": {
+			"source.fixAll": false,
+			"source.fixAll.eslint": true,
+			"source.organizeImports": false
+		},
 
 	/* —————————————————————————————— Prettier ———————————————————————————————— */
 	/* Add support for `prettier-plugin-astro` */

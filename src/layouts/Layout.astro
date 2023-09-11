@@ -1,0 +1,38 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+	</body>
+</html>
+
+<script>
+  import { Modal } from 'flowbite'
+
+  // select the two elements that we'll work with
+  const $buttonElement: HTMLElement | null = document.querySelector('#button');
+  const $modalElement: HTMLElement | null = document.querySelector('#defaultModal');
+
+  // create a new modal component
+  const modal = new Modal($modalElement);
+
+  // toggle the visibility of the modal when clicking on the button
+  if ($buttonElement) {
+    $buttonElement.addEventListener('click', () => modal.toggle());
+  }
+</script>
