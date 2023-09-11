@@ -1,5 +1,4 @@
 /** @type {import("@types/eslint").Linter.Config} */
-// Extracted from `webdev-configs` (https://github.com/JulianCataldo/web-garden/tree/develop/configs)
 
 module.exports = {
 	root: true,
@@ -26,7 +25,8 @@ module.exports = {
 				'@typescript-eslint',
 			],
 
-			parser: '@typescript-eslint/parser',
+			parser: 
+			'@typescript-eslint/parser',
 			parserOptions: {
 				project: ['./tsconfig.json'] /* Specify it only for TypeScript files */,
 				ecmaVersion: 'latest',
@@ -36,14 +36,19 @@ module.exports = {
 			extends: [
 				'airbnb-base',
 				'airbnb-typescript',
-
+				'plugin:astro/recommended',
 				'plugin:@typescript-eslint/recommended',
 				'plugin:@typescript-eslint/recommended-requiring-type-checking',
 				'plugin:@typescript-eslint/strict',
-
+				'eslint:recommended',
 				'prettier',
 			],
-
+			"overrides": [
+        {
+            "files": ["*.astro"],
+            "parser": "astro-eslint-parser"
+        }
+    ],
 			rules: {
 				'tsdoc/syntax': 'warn',
 				'@typescript-eslint/no-unused-vars': [
@@ -92,12 +97,14 @@ module.exports = {
 			parserOptions: {
 				/* Prevents "unresolved" when using "paths" */
 				// project: ['./tsconfig.json'],
-				parser: '@typescript-eslint/parser',
-				extraFileExtensions: ['.astro'],
+				parser: "@typescript-eslint/parser",
+        extraFileExtensions: [".astro"],
 			},
 			rules: {
 				'import/no-absolute-path': 'off',
 				/* ESLint won't capture ambient declarations in Astro files. */
+				"astro/no-conflict-set-directives": "error",
+        "astro/no-unused-define-vars-in-style": "error",
 				'no-undef': 'off',
 				'import/extensions': 'off',
 				'import/no-named-as-default-member': 'off',
@@ -124,5 +131,21 @@ module.exports = {
 				astroHTML: 'readonly',
 			},
 		},
+			
+			{
+				files: ["**/*.astro/*.js", "*.astro/*.js"],
+				env: {
+					browser: true,
+					es2020: true,
+				},
+				parserOptions: {
+					sourceType: "module",
+				},
+				rules: {
+					"prettier/prettier": "off",
+				},
+
+		},
 	],
+	
 };
