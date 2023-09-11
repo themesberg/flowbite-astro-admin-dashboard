@@ -14,8 +14,30 @@ module.exports = {
 		browser: true,
 		node: true,
 	},
+	
+	files: ["*.ts", "*.tsx"],
+	parser: "typescript-eslint-parser-for-extra-files",
+	parserOptions: {
+			project: "./your/tsconfig.json"
+			// ....
+	},
+},
+{
+	files: ["*.svelte"],
+	parser: "svelte-eslint-parser",
+	parserOptions: {
+			parser: require("typescript-eslint-parser-for-extra-files"),
+			// Or
+			// "parser": {
+			//     "ts": require("typescript-eslint-parser-for-extra-files")
+			// }
+			project: "./tsconfig.json"
+
+	},
 
 	overrides: [
+
+		
 		/* — TS — */
 		{
 			files: ['*.ts', '*.mts', '*.cts'],

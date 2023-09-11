@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 
-export const get: APIRoute = function get(/* { params, request } */) {
+export const GET: APIRoute = function GET(/* { params, request } */) {
 	/* IDEA: Can be dynamicized (alternative colors…) */
 
 	const icon = /* html */ `
