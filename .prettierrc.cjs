@@ -12,6 +12,8 @@ module.exports = {
 	useTabs: true,
 
 	plugins: ['./node_modules/prettier-plugin-astro'],
+	autoprefixer: {},
+	tailwindcss: {},
 	overrides: [
 		{
 			files: '*.astro',

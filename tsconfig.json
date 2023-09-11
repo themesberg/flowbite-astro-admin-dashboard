@@ -2,10 +2,12 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
-		"plugins": [
+    "plugins": [
       {
         "name": "@astrojs/ts-plugin"
       }
-    ]
+    ],
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js"
   }
 }

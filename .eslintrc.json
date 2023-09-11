@@ -1,0 +1,3 @@
+{
+  "extends": "@brucesong/eslint-config-astro"
+}
