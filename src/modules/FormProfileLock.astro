@@ -1,22 +1,20 @@
 ---
-import { asset, url } from '../lib/data.js';
+import { asset } from '../lib/data.js';
+
+// Components
+import LogoHeader from '../components/LogoHeader.astro';
+import TextInput from '../components/TextInput.astro';
 ---
 
 <div
 	class="w-full flex flex-col items-center justify-center px-6 pt-8 mx-auto pt:mt-0 dark:bg-gray-900"
 >
-	<a
-		href="#"
-		class="flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white"
-	>
-		<img src={asset('images/logo.svg')} alt="FlowBite Logo" class="mr-4 h-11" />
-		<span>Flowbite</span>
-	</a>
 	<!-- Card -->
 	<div
 		class="w-full max-w-md bg-white rounded-lg shadow md:mt-0 xl:p-0 dark:bg-gray-800"
 	>
 		<div class="w-full p-6 sm:p-8">
+			<LogoHeader text="💺 Strapped in and geared up, are you prepared to roll again?🌟" />
 			<div class="flex space-x-4">
 				<img
 					class="w-8 h-8 rounded-full"
@@ -31,21 +29,7 @@ import { asset, url } from '../lib/data.js';
 				Better to be safe than sorry.
 			</p>
 			<form class="mt-8 space-y-6" action="#">
-				<div>
-					<label
-						for="profile-lock"
-						class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-						>Your password</label
-					>
-					<input
-						type="password"
-						name="profile-lock"
-						id="profile-lock"
-						class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-						placeholder="••••••••"
-						required
-					/>
-				</div>
+				<TextInput label="Your password" type="password" name="profile-lock" id="profile-lock" placeholder="••••••••" isRequired={true} />
 				<div class="flex items-start">
 					<div class="flex items-center h-5">
 						<input
