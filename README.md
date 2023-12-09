@@ -163,7 +163,7 @@ After cloning this repository, you'll find the following (simplified) structure:
 ```sh
 🛬
 ├── 💧 data
-│   └── **/*.json                        # Satic data sources for REST etc.
+│   └── **/*.json                        # Static data sources for REST etc.
 │
 └── src
     │
